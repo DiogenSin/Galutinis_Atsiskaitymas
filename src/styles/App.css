@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 15vw;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid gray;
+}
+header img {
+  height: 50px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+header nav a {
+  text-decoration: none;
+}
+header nav #registrationBtn {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(122, 52, 212);
+  border: 0px;
+  border-radius: 5px;
+}
+header nav #registrationBtn a {
+  color: white;
+}/*# sourceMappingURL=App.css.map */
