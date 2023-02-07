@@ -1,16 +1,12 @@
 import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { useState } from 'react'
+import UserContext from '../contexts/UserContexts'
+import { useContext } from 'react'
 
 const Login = () => {
 
-    // const { handleLogin, loginFailed } = useContext(UserContext)
-
-
-    const handleLogin = (e) => {
-
-        console.log(e)
-    }
+    const { handleLogin, loginFailed } = useContext(UserContext)
 
 
 
@@ -71,11 +67,11 @@ const validationSchema = Yup.object().shape({
                     }
                 </label>
                 <button type='submit'><i className='fa fa-send'></i></button>
-                {/* {
+                {
                     loginFailed ?
                     <p id='loginFailed'>Email or password is incorrect</p>
                     : null
-                } */}
+                }
             </Form>
         )}
 
