@@ -2,14 +2,12 @@ import * as Yup from 'yup'
 import { Formik, Form, Field } from 'formik'
 import { useState } from "react"
 import { nanoid } from 'nanoid'
+import UserContext from '../contexts/UserContexts'
+import { useContext } from 'react'
 
 const Registration = () => {
 
-    // const { handleRegistration, userExists } = useContext(UserContext)
-
-    const handleRegistration = (e) => {
-        console.log(e)
-    }
+    const { handleRegistration, userExists } = useContext(UserContext)
 
     const [registrationInputs, setregistrationInputs] = useState({
         email:"",
@@ -86,11 +84,11 @@ const validationSchema = Yup.object().shape({
                     }
                 </label>
                 <button type='submit'><i className='fa fa-send'></i></button>
-                {/* {
+                {
                     userExists ?
                     <p id='registrationFailed'>The user is taken</p>
                     : null
-                } */}
+                }
             </Form>
         )}
 
