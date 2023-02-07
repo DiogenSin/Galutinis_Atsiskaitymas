@@ -43,11 +43,12 @@ const validationSchema = Yup.object().shape({
         
             <Form action='' id="registrationForm">
                 <h1>Registration</h1>
-                <label htmlFor=''>
+                <label htmlFor='email'>
+                    Email:
                     <Field
                         type="text"
                         name="email"
-                        placeholder="expample@email.com"
+                        placeholder=""
                         value={values.email}
                         onChange={(e) => setValues({...values, email: e.target.value})}
                     />
@@ -56,11 +57,12 @@ const validationSchema = Yup.object().shape({
                         <span>{errors.email}</span> : null
                     }
                 </label>
-                <label action='' htmlFor=''>
+                <label action='' htmlFor='password'>
+                    Password:
                     <Field
                         type="password"
                         name="password"
-                        placeholder="Password"
+                        placeholder=""
                         value={values.password}
                         onChange={(e) => setValues({...values, password: e.target.value})}
                     />
@@ -69,11 +71,12 @@ const validationSchema = Yup.object().shape({
                         <span>{errors.password}</span> : null
                     }
                 </label>
-                <label action='' htmlFor=''>
+                <label action='' htmlFor='passwordRepeat'>
+                    Repeat password:
                     <Field
                         type="password"
                         name="passwordRepeat"
-                        placeholder="Repeat the password"
+                        placeholder=""
                         value={values.passwordRepeat}
                         onChange={(e) => setValues({...values, passwordRepeat: e.target.value})}
                     />
@@ -82,7 +85,7 @@ const validationSchema = Yup.object().shape({
                         <span>{errors.passwordRepeat}</span> : null
                     }
                 </label>
-                <button type='submit'>Submit</button>
+                <button type='submit'><i className='fa fa-send'></i></button>
                 {/* {
                     userExists ?
                     <p id='registrationFailed'>The user is taken</p>

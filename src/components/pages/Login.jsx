@@ -42,11 +42,12 @@ const validationSchema = Yup.object().shape({
         
             <Form action='' id="loginForm">
                 <h1>Login</h1>
-                <label htmlFor=''>
+                <label htmlFor='email'>
+                    Email:
                     <Field
                         type="text"
                         name="email"
-                        placeholder="expample@email.com"
+                        placeholder=""
                         value={values.email}
                         onChange={(e) => setValues({...values, email: e.target.value})}
                     />
@@ -55,11 +56,12 @@ const validationSchema = Yup.object().shape({
                         <span>{errors.email}</span> : null
                     }
                 </label>
-                <label action='' htmlFor=''>
+                <label action='' htmlFor='password'>
+                    Password:
                     <Field
                         type="password"
                         name="password"
-                        placeholder="Password"
+                        placeholder=""
                         value={values.password}
                         onChange={(e) => setValues({...values, password: e.target.value})}
                     />
@@ -68,7 +70,7 @@ const validationSchema = Yup.object().shape({
                         <span>{errors.password}</span> : null
                     }
                 </label>
-                <button type='submit'>Login</button>
+                <button type='submit'><i className='fa fa-send'></i></button>
                 {/* {
                     loginFailed ?
                     <p id='loginFailed'>Email or password is incorrect</p>
