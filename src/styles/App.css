@@ -213,9 +213,9 @@ main #questions #qBody .questionCard .likeDislike p {
 main #questions #qBody .questionCard .likeDislike i {
   font-size: 24px;
 }
-main #questions #qBody .questionCard .likeDislike .likes {
+main #questions #qBody .questionCard .likeDislike .like {
   color: green;
 }
-main #questions #qBody .questionCard .likeDislike .dislikes {
+main #questions #qBody .questionCard .likeDislike .dislike {
   color: red;
 }/*# sourceMappingURL=App.css.map */

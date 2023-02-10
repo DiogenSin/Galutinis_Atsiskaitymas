@@ -27,32 +27,32 @@
   ],
   "questions": [
     {
-      "qID": "1s3dgasdas56w4cw",
+      "id": "1s3dgasdas56w4cw",
       "uID": "f465sad6we51v",
       "question": "How much does Earth weigh?",
       "description": "I am just curious about how much does earth weigh? Some say it`s 100 billion kilograms, but I feel like it should be more.",
-      "like": 15,
-      "dislike": 20,
+      "likes": 20,
+      "dislikes": 30,
       "edited": false,
       "date": "2023.01.25"
     },
     {
-      "qID": "1snertdfgfdy6w4cw",
+      "id": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
       "question": "Why horses sleep standing?",
       "description": "I was told, that horses sleep standing. Is that true? If so, why?",
-      "like": 7,
-      "dislike": 2,
+      "likes": 8,
+      "dislikes": 3,
       "edited": true,
       "date": "2023.01.25"
     },
     {
-      "qID": "1s3dgyuuy56w4cw",
+      "id": "1s3dgyuuy56w4cw",
       "uID": "f465sgfwee51v",
       "question": "Would you see a light frying faster than the speed of light?",
       "description": "If you are traveling in a spaceship faster than the speed of light and turn on the lights in your ship - would you see them?",
-      "like": 15,
-      "dislike": 20,
+      "likes": 17,
+      "dislikes": 21,
       "edited": false,
       "date": "2023.01.25"
     }

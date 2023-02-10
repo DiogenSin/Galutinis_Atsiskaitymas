@@ -1,10 +1,12 @@
 import Question from "../organisms/Question"
 import QAContext from "../contexts/QAContexts"
+import UserContext from "../contexts/UserContexts"
 import { useContext } from "react"
 
 const Main = () => {
 
     const { qList } = useContext(QAContext)
+    const { userList } = useContext(UserContext)
 
     return (
 
@@ -15,12 +17,13 @@ const Main = () => {
                 <h1>Questions header</h1>
             </div>
             <div id="qBody">
+                
                 {
-                    qList ?
+                    qList && userList ?
                         
                         qList.map(question => 
                             <Question
-                            key={question.qID}
+                            key={question.id}
                             data={question}
                             />
                             )
