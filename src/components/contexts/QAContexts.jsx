@@ -5,7 +5,21 @@ const QAContext = createContext()
 const QAProvider = ({children}) => {
 
     const [qList, setQList] = useState(null)
+    const [aList, setAList] = useState(null)
 
+    const getQData = async() => {
+
+        const fetchData = await fetch('http://localhost:3001/questions')
+        .then (res => res.json())
+        setQList(fetchData)
+    }
+
+    const getAData = async() => {
+
+        const fetchData = await fetch('http://localhost:3001/answers')
+        .then (res => res.json())
+        setAList(fetchData)
+    }
 
     const handleLike = (data) => {
 
@@ -39,6 +53,7 @@ const QAProvider = ({children}) => {
             })
       })
     }
+
     const handleDislike = (data) => {
 
         const dislikedQuestion = {
@@ -73,18 +88,12 @@ const QAProvider = ({children}) => {
     }
 
 
-    const getQData = async() => {
-
-        const fetchData = await fetch('http://localhost:3001/questions')
-        .then (res => res.json())
-        setQList(fetchData)
-
-    }
 
 
 
     useEffect(() => {
         getQData()
+        getAData()
       }, [])
 
 
@@ -93,6 +102,7 @@ const QAProvider = ({children}) => {
         <QAContext.Provider
             value={{
                 qList,
+                aList,
                 handleLike,
                 handleDislike
             }}

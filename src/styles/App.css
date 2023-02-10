@@ -161,12 +161,13 @@ main #questions #qHeader {
   text-align: center;
   margin-bottom: 25px;
 }
-main #questions #qBody {
+main #questions #qBody .qAnda {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
+  margin-bottom: 50px;
 }
-main #questions #qBody .questionCard {
+main #questions #qBody .qAnda .questionCard {
   display: grid;
   grid-template: 1fr/10% 70% 10%;
   gap: 15px;
@@ -176,46 +177,93 @@ main #questions #qBody .questionCard {
   border-radius: 15px;
   padding: 10px;
 }
-main #questions #qBody .questionCard .userImg img {
+main #questions #qBody .qAnda .questionCard .userImg img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100px;
   width: 100px;
 }
-main #questions #qBody .questionCard .qField {
+main #questions #qBody .qAnda .questionCard .qField {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-main #questions #qBody .questionCard .qField h2 {
+main #questions #qBody .qAnda .questionCard .qField h2 {
   margin: 0px;
 }
-main #questions #qBody .questionCard .qField .qInfo {
+main #questions #qBody .qAnda .questionCard .qField .qInfo {
   display: flex;
   gap: 10px;
   color: gray;
 }
-main #questions #qBody .questionCard .qField .qInfo p {
+main #questions #qBody .qAnda .questionCard .qField .qInfo p {
   margin: 0px;
 }
-main #questions #qBody .questionCard .likeDislike {
+main #questions #qBody .qAnda .questionCard .likeDislike {
   display: grid;
   grid-template: 25px 25px/25px 25px;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-main #questions #qBody .questionCard .likeDislike p {
+main #questions #qBody .qAnda .questionCard .likeDislike p {
   margin: 0px;
   font-size: 18px;
 }
-main #questions #qBody .questionCard .likeDislike i {
+main #questions #qBody .qAnda .questionCard .likeDislike i {
   font-size: 24px;
 }
-main #questions #qBody .questionCard .likeDislike .like {
+main #questions #qBody .qAnda .questionCard .likeDislike .like {
   color: green;
 }
-main #questions #qBody .questionCard .likeDislike .dislike {
+main #questions #qBody .qAnda .questionCard .likeDislike .dislike {
+  color: red;
+}
+main #questions #qBody .qAnda .answerCard {
+  display: grid;
+  align-self: flex-end;
+  width: 70%;
+  grid-template: 1fr/80% 10%;
+  height: 70px;
+  gap: 15px;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+main #questions #qBody .qAnda .answerCard .imgAndAnswer {
+  display: flex;
+  gap: 10px;
+}
+main #questions #qBody .qAnda .answerCard .userImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+main #questions #qBody .qAnda .answerCard .aField {
+  justify-self: stretch;
+}
+main #questions #qBody .qAnda .answerCard .likeDislike {
+  display: grid;
+  grid-template: 25px 25px/25px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main #questions #qBody .qAnda .answerCard .likeDislike p {
+  margin: 0px;
+  font-size: 12px;
+}
+main #questions #qBody .qAnda .answerCard .likeDislike i {
+  font-size: 16px;
+}
+main #questions #qBody .qAnda .answerCard .likeDislike .like {
+  color: green;
+}
+main #questions #qBody .qAnda .answerCard .likeDislike .dislike {
   color: red;
 }/*# sourceMappingURL=App.css.map */

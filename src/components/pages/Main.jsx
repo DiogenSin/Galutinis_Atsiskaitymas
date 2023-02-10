@@ -2,10 +2,11 @@ import Question from "../organisms/Question"
 import QAContext from "../contexts/QAContexts"
 import UserContext from "../contexts/UserContexts"
 import { useContext } from "react"
+import Answers from "../organisms/Answers"
 
 const Main = () => {
 
-    const { qList } = useContext(QAContext)
+    const { qList, aList } = useContext(QAContext)
     const { userList } = useContext(UserContext)
 
     return (
@@ -22,12 +23,21 @@ const Main = () => {
                     qList && userList ?
                         
                         qList.map(question => 
-                            <Question
+                            <div
+                            className="qAnda"
                             key={question.id}
-                            data={question}
-                            />
+                            >
+                            <Question data={question}/>
+                            {
+                                aList ?
+                                <Answers qID={question.id} />
+                                :
+                                <h3>Loading</h3>
+
+                            }
+
+                            </div>
                             )
-                            
                     :
                     <h1>Loading</h1>
 

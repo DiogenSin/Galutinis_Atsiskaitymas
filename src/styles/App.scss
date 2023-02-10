@@ -185,11 +185,12 @@ main #questions {
     }
 
 
-    #qBody {
+    #qBody .qAnda{
 
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 10px;
+        margin-bottom: 50px;
 
         .questionCard {
 
@@ -260,6 +261,63 @@ main #questions {
             }
 
 
+        }
+
+        .answerCard {
+
+            display: grid;
+            align-self: flex-end;
+            width: 70%;
+            grid-template: 1fr / 80% 10%;
+            height: 70px;
+            gap: 15px;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+
+            .imgAndAnswer{
+                display: flex;
+                gap: 10px;
+            }
+            .userImg {
+
+                img {
+                    object-fit: cover;
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .aField {
+                justify-self: stretch;
+            }
+
+            .likeDislike {
+                display: grid;
+                grid-template: 25px 25px / 25px 25px;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                p {
+                    margin: 0px;
+                    font-size: 12px;
+                }
+                i {
+                    font-size: 16px;
+                }
+
+                .like {
+                    color: green;
+                }
+
+                .dislike {
+                    color: red;
+                }
+
+            }
         }
 
     }
