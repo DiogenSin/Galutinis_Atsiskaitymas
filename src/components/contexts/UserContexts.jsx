@@ -79,7 +79,8 @@ const UserProvider = ({children}) => {
                 loggedIn,
                 loginFailed,
                 handleRegistration,
-                userExists
+                userExists,
+                userList
             }}
         >
             {children}

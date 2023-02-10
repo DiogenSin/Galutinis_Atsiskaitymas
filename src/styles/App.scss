@@ -1,4 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -45,6 +46,8 @@ main {
     align-items: center;
     height: auto;
     background-color: rgba(128, 128, 128, 0.096);
+    box-sizing: border-box;
+    padding: 50px 15vw;
 }
 
 main #registrationForm {
@@ -55,7 +58,7 @@ main #registrationForm {
     position: relative;
     gap: 15px;
     width: 35vw;
-    height: 30vh;
+    height: auto;
     background-color: white;
     padding: 25px;
     margin: 50px;
@@ -164,5 +167,100 @@ main #loginForm {
         i  {
             color: rgb(122, 52, 212);
         }
+    }
+}
+
+main #questions {
+
+
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 15px;
+
+    #qHeader {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+
+    #qBody {
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .questionCard {
+
+            display: grid;
+            grid-template: 1fr / 10% 70% 10%;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+
+
+            .userImg {
+
+                img {
+    
+                    object-fit: cover;
+                    height: 100px;
+                    width: 100px
+                }
+            }
+
+            .qField {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                h2 {
+                    margin: 0px;
+                }
+
+                .qInfo {
+                    display: flex;
+                    gap: 10px;
+                    color: gray;
+                    
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+            
+            .likeDislike {
+                display: grid;
+                grid-template: 25px 25px / 25px 25px;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                p {
+                    margin: 0px;
+                    font-size: 18px;
+                }
+                i {
+                    font-size: 24px;
+                }
+
+                .likes {
+                    color: green;
+                }
+
+                .dislikes {
+                    color: red;
+                }
+
+            }
+
+
+        }
+
     }
 }
