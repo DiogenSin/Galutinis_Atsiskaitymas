@@ -13,6 +13,7 @@ const Registration = () => {
         email:"",
         password:"",
         passwordRepeat: "",
+        picture: "",
         id:nanoid()
     })
 
@@ -25,6 +26,8 @@ const validationSchema = Yup.object().shape({
         .required('This must be filled'),
     passwordRepeat: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
+        .required('This must be filled'),
+    picture: Yup.string()
         .required('This must be filled'),
 })
 
@@ -81,6 +84,20 @@ const validationSchema = Yup.object().shape({
                     {
                         errors.passwordRepeat && touched.passwordRepeat ?
                         <span>{errors.passwordRepeat}</span> : null
+                    }
+                </label>
+                <label htmlFor='picture'>
+                    Link to profile picture:
+                    <Field
+                        type="url"
+                        name="picture"
+                        placeholder=""
+                        value={values.picture}
+                        onChange={(e) => setValues({...values, picture: e.target.value})}
+                    />
+                    {
+                        errors.picture && touched.picture ?
+                        <span>{errors.picture}</span> : null
                     }
                 </label>
                 <button type='submit'><i className='fa fa-send'></i></button>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { QAProvider } from './components/contexts/QAContexts';
 import { UserProvider } from './components/contexts/UserContexts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,7 +11,9 @@ root.render(
 
     <BrowserRouter>
         <UserProvider>
-            <App />
+            <QAProvider>
+                <App />
+            </QAProvider>
         </UserProvider>
     </BrowserRouter>
 
