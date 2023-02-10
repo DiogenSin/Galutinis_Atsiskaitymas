@@ -35,8 +35,8 @@
       "uID": "f465sad6we51v",
       "question": "How much does Earth weigh?",
       "description": "I am just curious about how much does earth weigh? Some say it`s 100 billion kilograms, but I feel like it should be more.",
-      "likes": 22,
-      "dislikes": 31,
+      "likes": 24,
+      "dislikes": 33,
       "edited": false,
       "date": "2023.01.25"
     },
@@ -45,7 +45,7 @@
       "uID": "f465sgfwee51v",
       "question": "Why horses sleep standing?",
       "description": "I was told, that horses sleep standing. Is that true? If so, why?",
-      "likes": 11,
+      "likes": 12,
       "dislikes": 5,
       "edited": true,
       "date": "2023.01.25"
@@ -67,7 +67,7 @@
       "qID": "1snertdfgfdy6w4cw",
       "uID": "f465sad6we51v",
       "answer": "I am not sure why they sleep standing, and at this point I am afraid to ask.",
-      "likes": 21,
+      "likes": 23,
       "dislikes": 31,
       "edited": false,
       "date": "2023.01.25"
@@ -77,18 +77,8 @@
       "qID": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
       "answer": "Le dot",
-      "likes": 8,
-      "dislikes": 4,
-      "edited": true,
-      "date": "2023.01.25"
-    },
-    {
-      "id": "1snsdffbrtb4cw",
-      "qID": "1snertdfgfdy6w4cw",
-      "uID": "f465sgfwee51v",
-      "answer": "I found the anser. They sleep standing because the ground is cold.",
-      "likes": 8,
-      "dislikes": 4,
+      "likes": 9,
+      "dislikes": 5,
       "edited": true,
       "date": "2023.01.25"
     },
@@ -97,8 +87,8 @@
       "qID": "1s3dgasdas56w4cw",
       "uID": "u7-cU09ODJLZzIHCcF4ui",
       "answer": "According to Google, the Earth weigh 5,972×10^24 kg",
-      "likes": 8,
-      "dislikes": 4,
+      "likes": 15,
+      "dislikes": 10,
       "edited": true,
       "date": "2023.01.25"
     }

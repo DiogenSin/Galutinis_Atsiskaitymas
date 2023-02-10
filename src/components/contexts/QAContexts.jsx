@@ -87,7 +87,69 @@ const QAProvider = ({children}) => {
       })
     }
 
+    const handleALike = (data) => {
+        const likedAnswer = {
+            id: data.id,
+            qID: data.qID,
+            uID: data.uID,
+            answer: data.answer,
+            likes: data.likes+1,
+            dislikes: data.dislikes,
+            edited: data.edited,
+            date: data.date
+        }
 
+        setAList(aList.map(answer => answer.id === data.id ? {...answer, ...likedAnswer} : answer))
+
+        fetch(`http://localhost:3001/answers/${data.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                qID: data.qID,
+                uID: data.uID,
+                answer: data.answer,
+                likes: data.likes+1,
+                dislikes: data.dislikes,
+                edited: data.edited,
+                date: data.date
+            })
+      })
+    }
+
+    const handleADislike = (data) => {
+        const dislikedAnswer = {
+            id: data.id,
+            qID: data.qID,
+            uID: data.uID,
+            answer: data.answer,
+            likes: data.likes,
+            dislikes: data.dislikes+1,
+            edited: data.edited,
+            date: data.date
+        }
+
+        setAList(aList.map(answer => answer.id === data.id ? {...answer, ...dislikedAnswer} : answer))
+
+        fetch(`http://localhost:3001/answers/${data.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                qID: data.qID,
+                uID: data.uID,
+                answer: data.answer,
+                likes: data.likes,
+                dislikes: data.dislikes+1,
+                edited: data.edited,
+                date: data.date
+            })
+      })
+    }
 
 
 
@@ -104,7 +166,9 @@ const QAProvider = ({children}) => {
                 qList,
                 aList,
                 handleLike,
-                handleDislike
+                handleDislike,
+                handleALike,
+                handleADislike
             }}
         >
             {children}

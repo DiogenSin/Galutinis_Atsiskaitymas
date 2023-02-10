@@ -169,7 +169,7 @@ main #questions #qBody .qAnda {
 }
 main #questions #qBody .qAnda .questionCard {
   display: grid;
-  grid-template: 1fr/10% 70% 10%;
+  grid-template: 100px/10% 70% 10%;
   gap: 15px;
   align-items: center;
   justify-content: space-between;
@@ -177,10 +177,13 @@ main #questions #qBody .qAnda .questionCard {
   border-radius: 15px;
   padding: 10px;
 }
+main #questions #qBody .qAnda .questionCard .userImg {
+  height: 100%;
+}
 main #questions #qBody .qAnda .questionCard .userImg img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100px;
+  height: 100%;
   width: 100px;
 }
 main #questions #qBody .qAnda .questionCard .qField {
@@ -191,6 +194,8 @@ main #questions #qBody .qAnda .questionCard .qField {
 }
 main #questions #qBody .qAnda .questionCard .qField h2 {
   margin: 0px;
+  font-size: 18px;
+  font-weight: 700;
 }
 main #questions #qBody .qAnda .questionCard .qField .qInfo {
   display: flex;
@@ -224,7 +229,7 @@ main #questions #qBody .qAnda .answerCard {
   display: grid;
   align-self: flex-end;
   width: 70%;
-  grid-template: 1fr/80% 10%;
+  grid-template: 1fr/85% 10%;
   height: 70px;
   gap: 15px;
   align-content: center;
@@ -238,6 +243,10 @@ main #questions #qBody .qAnda .answerCard .imgAndAnswer {
   display: flex;
   gap: 10px;
 }
+main #questions #qBody .qAnda .answerCard .userImg {
+  display: flex;
+  align-items: center;
+}
 main #questions #qBody .qAnda .answerCard .userImg img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -245,7 +254,21 @@ main #questions #qBody .qAnda .answerCard .userImg img {
   width: 50px;
 }
 main #questions #qBody .qAnda .answerCard .aField {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   justify-self: stretch;
+}
+main #questions #qBody .qAnda .answerCard .aField p {
+  margin: 0px;
+}
+main #questions #qBody .qAnda .answerCard .aField .qInfo {
+  display: flex;
+  gap: 10px;
+  color: gray;
+}
+main #questions #qBody .qAnda .answerCard .aField .qInfo p {
+  margin: 0px;
 }
 main #questions #qBody .qAnda .answerCard .likeDislike {
   display: grid;

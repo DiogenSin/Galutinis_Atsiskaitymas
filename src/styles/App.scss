@@ -195,7 +195,7 @@ main #questions {
         .questionCard {
 
             display: grid;
-            grid-template: 1fr / 10% 70% 10%;
+            grid-template: 100px / 10% 70% 10%;
             gap: 15px;
             align-items: center;
             justify-content: space-between;
@@ -206,10 +206,12 @@ main #questions {
 
             .userImg {
 
+                height: 100%;
+
                 img {
     
                     object-fit: cover;
-                    height: 100px;
+                    height: 100%;
                     width: 100px
                 }
             }
@@ -223,6 +225,8 @@ main #questions {
 
                 h2 {
                     margin: 0px;
+                    font-size: 18px;
+                    font-weight: 700;
                 }
 
                 .qInfo {
@@ -268,7 +272,7 @@ main #questions {
             display: grid;
             align-self: flex-end;
             width: 70%;
-            grid-template: 1fr / 80% 10%;
+            grid-template: 1fr / 85% 10%;
             height: 70px;
             gap: 15px;
             align-content: center;
@@ -284,6 +288,9 @@ main #questions {
             }
             .userImg {
 
+                display: flex;
+                align-items: center;
+
                 img {
                     object-fit: cover;
                     height: 50px;
@@ -292,7 +299,24 @@ main #questions {
             }
 
             .aField {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 justify-self: stretch;
+                
+                p {
+                    margin: 0px;
+                }
+
+                .qInfo {
+                    display: flex;
+                    gap: 10px;
+                    color: gray;
+                    
+                    p {
+                        margin: 0px;
+                    }
+                }
             }
 
             .likeDislike {
