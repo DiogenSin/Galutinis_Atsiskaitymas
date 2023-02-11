@@ -243,7 +243,38 @@ const QAProvider = ({children}) => {
     }
 
     const handleAEdit = (data) => {
-        console.log(data)
+        
+        const editedAnswer = {
+            id: data.id,
+            qID: data.qID,
+            uID: data.uID,
+            answer: data.answer,
+            likes: data.likes,
+            dislikes: data.dislikes,
+            edited: true,
+            date: todayIs()
+        }
+        setAList(aList.map(answer => answer.id === data.id ? {...answer, ...editedAnswer} : answer))
+        setClosedAForm(true)
+        setAnswerToEdit(null)
+
+        fetch(`http://localhost:3001/answers/${data.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                qID: data.qID,
+                uID: data.uID,
+                answer: data.answer,
+                likes: data.likes,
+                dislikes: data.dislikes,
+                edited: true,
+                date: todayIs()
+            })
+      })
+
     }
 
     const handleNewAnswer = (data) => {
@@ -289,8 +320,8 @@ const QAProvider = ({children}) => {
             description: data.description,
             likes: data.likes,
             dislikes: data.dislikes,
-            edited: !data.edited,
-            date: todayIs()
+            edited: data.edited,
+            date: data.date
         }
         setQuestionToEdit(editedQuestion)
         setClosedForm(false)
@@ -298,17 +329,15 @@ const QAProvider = ({children}) => {
 
     const handleOpenAForm = (data) => {
 
-        console.log(data)
-
         let editedAnswer = {
             id: data.id,
             qID: data.qID,
             uID: data.uID,
-            answer: data.question,
+            answer: data.answer,
             likes: data.likes,
             dislikes: data.dislikes,
-            edited: true,
-            date: todayIs()
+            edited: data.edited,
+            date: data.date
         }
         setAnswerToEdit(editedAnswer)
         setClosedAForm(false)
