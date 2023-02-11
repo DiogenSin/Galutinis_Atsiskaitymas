@@ -5,7 +5,7 @@ import { useContext, useState } from "react"
 const Question = ({data}) => {
 
     const { userList } = useContext(UserContext) 
-    const { handleLike, handleDislike, handleQEdit, handleQDelete } = useContext(QAContext)
+    const { handleLike, handleDislike, handleOpenForm, handleQDelete } = useContext(QAContext)
     
     const questionAuthor = userList.find(user => user.id === data.uID)
 
@@ -18,7 +18,7 @@ const Question = ({data}) => {
             <div className="qField">
                 <h2>{data.question}
                     <span className="icons">
-                        <i className="glyphicon glyphicon-edit" onClick={e => handleQEdit(data)}></i>
+                        <i className="glyphicon glyphicon-edit" onClick={e => handleOpenForm(data)}></i>
                         <i className="glyphicon glyphicon-trash" onClick={e => handleQDelete(data.id)}></i>
                     </span>
                 </h2>

@@ -33,12 +33,12 @@
     {
       "id": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
-      "question": "Why horses sleep standing?",
-      "description": "I was told, that horses sleep standing. Is that true? If so, why?",
-      "likes": 14,
-      "dislikes": 6,
+      "question": "Do snails breathe through their skin?",
+      "description": "This is a changed question about the breathing of snails.",
+      "likes": 18,
+      "dislikes": 7,
       "edited": true,
-      "date": "2023.01.25"
+      "date": "2023-2-11"
     },
     {
       "id": "1snsdfwgfdy6w4cw",
@@ -91,6 +91,16 @@
       "dislikes": 10,
       "edited": true,
       "date": "2023.01.25"
+    },
+    {
+      "id": "BZwpg3zl6cGQl_ga8AtKO",
+      "qID": "1snstjuyd6w4cw",
+      "uID": "u7-cU09ODJLZzIHCcF4ui",
+      "answer": "That`s a legit question. I think 10 bln.",
+      "likes": 1,
+      "dislikes": 0,
+      "edited": false,
+      "date": "2023-2-11"
     }
   ]
 }

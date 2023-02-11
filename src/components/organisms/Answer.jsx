@@ -5,7 +5,7 @@ import { useContext } from "react"
 const Answer = ({data}) => {
 
     const { userList } = useContext(UserContext)
-    const { handleALike, handleADislike, handleADelete, handleAEdit } = useContext(QAContext)
+    const { handleALike, handleADislike, handleADelete, handleAEdit, handleOpenAForm } = useContext(QAContext)
     const answerAuthor = userList.find(user => user.id === data.uID)
 
     return (
@@ -19,7 +19,7 @@ const Answer = ({data}) => {
                     <div className="aField">
                         <p>{data.answer}
                             <span className="icons">
-                            <i className="glyphicon glyphicon-edit" onClick={e => handleAEdit(data)}></i>
+                            <i className="glyphicon glyphicon-edit" onClick={e => handleOpenAForm(data)}></i>
                             <i className="glyphicon glyphicon-trash" onClick={e => handleADelete(data.id)}></i>
                             </span>
                         </p>

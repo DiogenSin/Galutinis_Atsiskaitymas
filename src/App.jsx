@@ -6,9 +6,12 @@ import Registration from './components/pages/Registration';
 import Header from './components/organisms/Header';
 import Footer from './components/organisms/Footer';
 import EditQuestionForm from './components/organisms/EditForm';
+import QAContext from './components/contexts/QAContexts';
+import { useContext } from 'react';
 
 function App() {
   
+  const { questionToEdit } = useContext(QAContext)
   
   return (
     <>
@@ -23,7 +26,13 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <EditQuestionForm />
+      {
+        questionToEdit ?
+        <EditQuestionForm />
+        :
+        null
+      }
+
     </>
   );
 }
