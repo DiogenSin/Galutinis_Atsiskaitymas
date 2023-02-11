@@ -34,7 +34,7 @@
       "id": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
       "question": "Do snails breathe through their skin?",
-      "description": "This is a changed question about the breathing of snails.",
+      "description": "It would be weird. Would`t it?",
       "likes": 19,
       "dislikes": 7,
       "edited": true,
@@ -57,7 +57,7 @@
       "description": "I was always wondering if I will have so much as well.",
       "likes": 16,
       "dislikes": 6,
-      "edited": true,
+      "edited": false,
       "date": "2023.01.25"
     }
   ],
@@ -66,21 +66,21 @@
       "id": "1ssaerger6w4cw",
       "qID": "1snertdfgfdy6w4cw",
       "uID": "f465sad6we51v",
-      "answer": "I am not sure why they sleep standing, and at this point I am afraid to ask.",
+      "answer": "I am not sure why they sleep standing, and at this point I am afraid to ask!",
       "likes": 23,
       "dislikes": 31,
-      "edited": false,
-      "date": "2023.01.25"
+      "edited": true,
+      "date": "2023-2-11"
     },
     {
       "id": "1ssaewery6w4cw",
       "qID": "1snertdfgfdy6w4cw",
       "uID": "eCdajlLUwnxjpUIDwlefz",
-      "answer": "I have heard it`s because the ground is cold",
+      "answer": "I think it`s true.",
       "likes": 24,
       "dislikes": 31,
-      "edited": false,
-      "date": "2023.01.25"
+      "edited": true,
+      "date": "2023-2-11"
     },
     {
       "id": "1snsdffbrtb4cw",
