@@ -2,6 +2,7 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
   align-items: center;
   color: black;
   border-bottom: 1px solid gray;
+  height: 13vh;
 }
 header img {
   height: 50px;
@@ -39,6 +41,7 @@ main {
   justify-content: center;
   align-items: center;
   height: auto;
+  min-height: 60vh;
   background-color: rgba(128, 128, 128, 0.096);
   box-sizing: border-box;
   padding: 50px 15vw;
@@ -344,4 +347,117 @@ main #questions #qBody .qAnda .newAnswer button {
 }
 main #questions #qBody .qAnda .newAnswer button i {
   color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 27vh;
+  align-items: flex-start;
+  padding: 50px 15vw 10px;
+  border-top: 1px solid gray;
+}
+footer img {
+  height: 150px;
+}
+footer #fContacts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style-type: none;
+  padding: 10px 0px 0px 0px;
+}
+footer #fContacts ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer iframe {
+  border: none;
+  width: 200px;
+  height: 150px;
+}
+
+#editForm {
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 10vh 15vh 10vh;
+  position: fixed;
+  top: 0px;
+}
+#editForm #close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 30px;
+}
+#editForm #close:hover {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+#editForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 15px;
+  width: 50vw;
+  height: 40vh;
+  background-color: white;
+  padding: 25px;
+  margin: 50px;
+  border-radius: 25px;
+  border: 1px solid gray;
+}
+#editForm label {
+  width: 70%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#editForm label input {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 1px solid gray;
+  padding: 15px;
+}
+#editForm label textarea {
+  width: 100%;
+  height: 75px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 1px solid gray;
+  padding: 15px;
+}
+#editForm button {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  height: 55px;
+  width: 55px;
+  background-color: rgb(122, 52, 212);
+  border-radius: 30px;
+  padding: 0px;
+  border: none;
+}
+#editForm button i {
+  color: white;
+  font-size: 26px;
+}
+#editForm button:hover {
+  background-color: rgba(121, 52, 212, 0.253);
+  cursor: pointer;
+}
+#editForm button:hover i {
+  color: rgb(122, 52, 212);
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=App.css.map */
