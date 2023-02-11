@@ -4,20 +4,16 @@ import { Formik, Form, Field } from 'formik'
 import QAContext from "../contexts/QAContexts"
 import { useContext } from "react"
 
-const EditAnswerForm = (data) => {
+const EditAnswerForm = () => {
 
 
     const { handleCloseForm, closedAForm, answerToEdit, handleAEdit } = useContext(QAContext)
-
-    const handleEditQuestion = (data) => {
-        console.log(data)
-    }
 
     const [editAnswer, setEditAnswer] = useState({
         id: answerToEdit.id,
         qID: answerToEdit.qID,
         uID: answerToEdit.uID,
-        answer: answerToEdit.question,
+        answer: answerToEdit.answer,
         likes: answerToEdit.likes,
         dislikes: answerToEdit.dislikes,
         edited: answerToEdit.edited,
