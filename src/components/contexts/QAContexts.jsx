@@ -7,6 +7,7 @@ const QAProvider = ({children}) => {
     const [qList, setQList] = useState(null)
     const [aList, setAList] = useState(null)
     const [closedForm, setClosedForm] = useState(true)
+    const [questionToEdit, setQuestionToEdit] = useState(null)
 
     const getQData = async() => {
 
@@ -166,8 +167,37 @@ const QAProvider = ({children}) => {
     }
 
     const handleQEdit = (data) => {
-        console.log(data)
+
+        const editedQuestion = {
+            id: data.id,
+            uID: data.uID,
+            question: data.question,
+            description: data.description,
+            likes: data.likes,
+            dislikes: data.dislikes,
+            edited: true,
+            date: todayIs()
+        }
+        setQList(qList.map(question => question.id === data.id ? {...question, ...editedQuestion} : question))
         setClosedForm(!closedForm)
+        setQuestionToEdit(null)
+
+        fetch(`http://localhost:3001/questions/${data.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                uID: data.uID,
+                question: data.question,
+                description: data.description,
+                likes: data.likes,
+                dislikes: data.dislikes,
+                edited: true,
+                date: todayIs()
+            })
+      })
     }
 
     const todayIs = () => {
@@ -248,8 +278,25 @@ const QAProvider = ({children}) => {
 
     }
 
+    const handleOpenForm = (data) => {
+
+        let editedQuestion = {
+            id: data.id,
+            uID: data.uID,
+            question: data.question,
+            description: data.description,
+            likes: data.likes,
+            dislikes: data.dislikes,
+            edited: !data.edited,
+            date: todayIs()
+        }
+        setQuestionToEdit(editedQuestion)
+        setClosedForm(false)
+    }
+
     const handleCloseForm = () => {
-        setClosedForm(!closedForm)
+        setQuestionToEdit(null)
+        setClosedForm(true)
     }
 
     useEffect(() => {
@@ -273,8 +320,10 @@ const QAProvider = ({children}) => {
                 handleQDelete,
                 todayIs,
                 handleNewAnswer,
-                handleCloseForm,
-                closedForm
+                handleOpenForm,
+                closedForm,
+                questionToEdit,
+                handleCloseForm
             }}
         >
             {children}

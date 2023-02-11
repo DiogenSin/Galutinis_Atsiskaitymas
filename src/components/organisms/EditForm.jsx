@@ -6,22 +6,17 @@ import { useContext } from "react"
 
 const EditQuestionForm = (data) => {
 
-
-    const { handleCloseForm, closedForm } = useContext(QAContext)
-
-    const handleEditQuestion = (data) => {
-        console.log(data)
-    }
+    const { handleCloseForm, closedForm, handleQEdit, questionToEdit } = useContext(QAContext)
 
     const [editQuestion, setEditQuestion] = useState({
-        id: data.id,
-        uID: data.uID,
-        question: data.question,
-        description: data.description,
-        likes: data.likes,
-        dislikes: data.dislikes,
-        edited: data.edited,
-        date: data.date
+        id: questionToEdit.id,
+        uID: questionToEdit.uID,
+        question: questionToEdit.question,
+        description: questionToEdit.description,
+        likes: questionToEdit.likes,
+        dislikes: questionToEdit.dislikes,
+        edited: questionToEdit.edited,
+        date: questionToEdit.date
     })
 
 const validationSchema = Yup.object().shape({
@@ -37,14 +32,14 @@ const validationSchema = Yup.object().shape({
         <Formik
             initialValues={editQuestion}
             validationSchema={validationSchema}
-            onSubmit={handleEditQuestion}
+            onSubmit={handleQEdit}
         >
 
         {({ errors, touched, values, setValues }) => (
             <div id="editForm" className={closedForm ? "hide" : "editForm"}>
             <i className="glyphicon glyphicon-remove" id="close" onClick={handleCloseForm}></i>
             <Form action=''>
-                <h3>Edit the answer</h3>
+                <h3>Edit the question</h3>
                 <label action='' htmlFor='question'>
                     Question:
                     <Field
