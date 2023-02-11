@@ -8,10 +8,11 @@ import Footer from './components/organisms/Footer';
 import EditQuestionForm from './components/organisms/EditForm';
 import QAContext from './components/contexts/QAContexts';
 import { useContext } from 'react';
+import EditAnswerForm from './components/organisms/EditAnswerForm';
 
 function App() {
   
-  const { questionToEdit } = useContext(QAContext)
+  const { questionToEdit, answerToEdit } = useContext(QAContext)
   
   return (
     <>
@@ -29,6 +30,12 @@ function App() {
       {
         questionToEdit ?
         <EditQuestionForm />
+        :
+        null
+      }
+      {
+        answerToEdit ?
+        <EditAnswerForm />
         :
         null
       }

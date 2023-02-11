@@ -7,6 +7,7 @@ const QAProvider = ({children}) => {
     const [qList, setQList] = useState(null)
     const [aList, setAList] = useState(null)
     const [closedForm, setClosedForm] = useState(true)
+    const [closedAForm, setClosedAForm] = useState(true)
     const [questionToEdit, setQuestionToEdit] = useState(null)
     const [answerToEdit, setAnswerToEdit] = useState(null)
 
@@ -298,6 +299,7 @@ const QAProvider = ({children}) => {
     const handleOpenAForm = (data) => {
 
         console.log(data)
+
         let editedAnswer = {
             id: data.id,
             qID: data.qID,
@@ -309,12 +311,14 @@ const QAProvider = ({children}) => {
             date: todayIs()
         }
         setAnswerToEdit(editedAnswer)
-        setClosedForm(false)
+        setClosedAForm(false)
     }
 
     const handleCloseForm = () => {
         setQuestionToEdit(null)
+        setAnswerToEdit(null)
         setClosedForm(true)
+        setClosedAForm(true)
     }
 
     useEffect(() => {
@@ -342,7 +346,9 @@ const QAProvider = ({children}) => {
                 closedForm,
                 questionToEdit,
                 handleCloseForm,
-                handleOpenAForm
+                handleOpenAForm,
+                answerToEdit,
+                closedAForm
             }}
         >
             {children}
