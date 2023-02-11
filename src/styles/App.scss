@@ -185,16 +185,17 @@ main #questions {
     }
 
 
-    #qBody {
+    #qBody .qAnda{
 
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 10px;
+        margin-bottom: 50px;
 
         .questionCard {
 
             display: grid;
-            grid-template: 1fr / 10% 70% 10%;
+            grid-template: 100px / 10% 70% 10%;
             gap: 15px;
             align-items: center;
             justify-content: space-between;
@@ -205,10 +206,12 @@ main #questions {
 
             .userImg {
 
+                height: 100%;
+
                 img {
     
                     object-fit: cover;
-                    height: 100px;
+                    height: 100%;
                     width: 100px
                 }
             }
@@ -222,6 +225,15 @@ main #questions {
 
                 h2 {
                     margin: 0px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    .icons {
+
+                        i {
+                            margin-left: 10px;
+                            font-size: 14px;
+                        }
+                    }
                 }
 
                 .qInfo {
@@ -249,17 +261,156 @@ main #questions {
                     font-size: 24px;
                 }
 
-                .likes {
+                .like {
                     color: green;
                 }
 
-                .dislikes {
+                .dislike {
                     color: red;
                 }
 
             }
 
 
+        }
+
+        .answerCard {
+
+            display: grid;
+            align-self: flex-end;
+            width: 70%;
+            grid-template: 1fr / 85% 10%;
+            height: 70px;
+            gap: 15px;
+            align-content: center;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+
+            .imgAndAnswer{
+                display: flex;
+                gap: 10px;
+            }
+            .userImg {
+
+                display: flex;
+                align-items: center;
+
+                img {
+                    object-fit: cover;
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .aField {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                justify-self: stretch;
+                
+                p {
+                    margin: 0px;
+                }
+
+                .icons {
+
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+
+                .qInfo {
+                    display: flex;
+                    gap: 10px;
+                    color: gray;
+                    
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+
+            .likeDislike {
+                display: grid;
+                grid-template: 25px 25px / 25px 25px;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                p {
+                    margin: 0px;
+                    font-size: 12px;
+                }
+                i {
+                    font-size: 16px;
+                }
+
+                .like {
+                    color: green;
+                }
+
+                .dislike {
+                    color: red;
+                }
+
+            }
+        }
+
+        .newAnswer {
+            display: flex;
+            align-self: flex-end;
+            width: 70%;
+            height: 40px;
+            gap: 15px;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 25px;
+            padding: 5px;
+            align-items: center;
+            img {
+                object-fit: cover;
+                height: 30px;
+                width: 40px;
+                padding-left: 5px;
+            }
+            label {
+
+                width: 100%;
+                margin: 0px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    border: 1px solid black;
+                    border-radius: 25px;
+                    height: 30px;
+                }
+
+                span {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 5px;
+                    color: red;
+                }
+
+            }
+
+            button {
+                margin-right: 10px;
+                border: none;
+                border-radius: 40px;
+                background-color: rgb(122, 52, 212);
+                height: 30px;
+                width: 40px;
+                padding: 0px;
+                i {
+                    color: white;
+
+
+                }
+            }
         }
 
     }

@@ -1,18 +1,13 @@
 import UserContext from "../contexts/UserContexts"
-import { useContext, useEffect } from "react"
+import QAContext from "../contexts/QAContexts"
+import { useContext, useState } from "react"
 
 const Question = ({data}) => {
 
     const { userList } = useContext(UserContext) 
+    const { handleLike, handleDislike, handleQEdit, handleQDelete } = useContext(QAContext)
     
-
-    // console.log(data.qID)
-    // console.log(data.uID)
-    // console.log(userList)
-
     const questionAuthor = userList.find(user => user.id === data.uID)
-    console.log("Klausimo autorius:")
-    console.log(questionAuthor.name)
 
     return (
         <>
@@ -21,7 +16,12 @@ const Question = ({data}) => {
                 <img src={questionAuthor.picture} alt={questionAuthor.name} />
             </div>
             <div className="qField">
-                <h2>{data.question}</h2>
+                <h2>{data.question}
+                    <span className="icons">
+                        <i className="glyphicon glyphicon-edit" onClick={e => handleQEdit(data)}></i>
+                        <i className="glyphicon glyphicon-trash" onClick={e => handleQDelete(data.id)}></i>
+                    </span>
+                </h2>
                 <p>{data.description}</p>
                 <div className="qInfo">
                     <p className="date">{data.date}</p>
@@ -30,10 +30,10 @@ const Question = ({data}) => {
 
             </div>
             <div className="likeDislike">
-                <p className="likes">{data.like}</p>
-                <i className="glyphicon glyphicon-chevron-up"></i>
-                <p className="dislikes">{data.dislike}</p>
-                <i className="glyphicon glyphicon-chevron-down"></i>
+                <p className="like">{data.likes}</p>
+                <i className="glyphicon glyphicon-chevron-up" onClick={e => handleLike(data)}></i>
+                <p className="dislike">{data.dislikes}</p>
+                <i className="glyphicon glyphicon-chevron-down" onClick={e => handleDislike(data)}></i>
             </div>
         </div>
         </>

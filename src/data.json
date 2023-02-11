@@ -16,45 +16,91 @@
     },
     {
       "id": "eCdajlLUwnxjpUIDwlefz",
+      "name": "Juozas",
       "email": "dovydas@gmail.com",
-      "password": "123456789"
+      "password": "123456789",
+      "picture": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
     },
     {
       "id": "u7-cU09ODJLZzIHCcF4ui",
       "email": "jakasdovydas@gmail.com",
-      "password": "123456"
+      "name": "Dovydas",
+      "password": "123456",
+      "picture": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
     }
   ],
   "questions": [
     {
-      "qID": "1s3dgasdas56w4cw",
-      "uID": "f465sad6we51v",
-      "question": "How much does Earth weigh?",
-      "description": "I am just curious about how much does earth weigh? Some say it`s 100 billion kilograms, but I feel like it should be more.",
-      "like": 15,
-      "dislike": 20,
-      "edited": false,
-      "date": "2023.01.25"
-    },
-    {
-      "qID": "1snertdfgfdy6w4cw",
+      "id": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
       "question": "Why horses sleep standing?",
       "description": "I was told, that horses sleep standing. Is that true? If so, why?",
-      "like": 7,
-      "dislike": 2,
+      "likes": 14,
+      "dislikes": 6,
       "edited": true,
       "date": "2023.01.25"
     },
     {
-      "qID": "1s3dgyuuy56w4cw",
+      "id": "1snsdfwgfdy6w4cw",
       "uID": "f465sgfwee51v",
-      "question": "Would you see a light frying faster than the speed of light?",
-      "description": "If you are traveling in a spaceship faster than the speed of light and turn on the lights in your ship - would you see them?",
-      "like": 15,
-      "dislike": 20,
+      "question": "Why is it so?",
+      "description": "Short explanation of the question.",
+      "likes": 14,
+      "dislikes": 6,
+      "edited": true,
+      "date": "2023.01.25"
+    },
+    {
+      "id": "1snstjuyd6w4cw",
+      "uID": "u7-cU09ODJLZzIHCcF4ui",
+      "question": "How much money does Bill Gates have?",
+      "description": "I was always wondering if I will have so much as well.",
+      "likes": 16,
+      "dislikes": 6,
+      "edited": true,
+      "date": "2023.01.25"
+    }
+  ],
+  "answers": [
+    {
+      "id": "1ssaerger6w4cw",
+      "qID": "1snertdfgfdy6w4cw",
+      "uID": "f465sad6we51v",
+      "answer": "I am not sure why they sleep standing, and at this point I am afraid to ask.",
+      "likes": 23,
+      "dislikes": 31,
       "edited": false,
       "date": "2023.01.25"
+    },
+    {
+      "id": "1ssaewery6w4cw",
+      "qID": "1snertdfgfdy6w4cw",
+      "uID": "eCdajlLUwnxjpUIDwlefz",
+      "answer": "I have heard it`s because the ground is cold",
+      "likes": 23,
+      "dislikes": 31,
+      "edited": false,
+      "date": "2023.01.25"
+    },
+    {
+      "id": "1snsdffbrtb4cw",
+      "qID": "1snsdfwgfdy6w4cw",
+      "uID": "u7-cU09ODJLZzIHCcF4ui",
+      "answer": "According to Google, it`s just is how it is",
+      "likes": 15,
+      "dislikes": 10,
+      "edited": true,
+      "date": "2023.01.25"
+    },
+    {
+      "id": "zSHb8qAVoXOVqRreOdG-R",
+      "qID": "1snsdfwgfdy6w4cw",
+      "uID": "f465sgfwee51v",
+      "answer": "Some people say, that It must be this way, otherwise it may not be so anymore.",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
+      "date": "2023-2-11"
     }
   ]
 }
