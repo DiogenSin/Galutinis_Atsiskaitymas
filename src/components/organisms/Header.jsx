@@ -6,7 +6,7 @@ const Header = () => {
     return (
 
         <header>
-            <img src="https://www.freeiconspng.com/thumbs/logo-design/pink-blue-logo-design-template-png-6.png" alt="" />
+            <a href="/"><img src="https://www.freeiconspng.com/thumbs/logo-design/pink-blue-logo-design-template-png-6.png" alt="" /></a>
 
             <nav>
                 <NavLink to='/login'>Login</NavLink>

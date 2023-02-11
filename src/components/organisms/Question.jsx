@@ -25,7 +25,7 @@ const Question = ({data}) => {
                 <p>{data.description}</p>
                 <div className="qInfo">
                     <p className="date">{data.date}</p>
-                    <p className="edited">Edited</p>
+                    <p className="edited">{data.edited ? "Edited" : null}</p>
                 </div>
 
             </div>
