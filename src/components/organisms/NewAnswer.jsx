@@ -7,11 +7,8 @@ import { Formik, Form, Field } from 'formik'
 
 const NewAnswer = ({data}) => {
 
-    const { todayIs } = useContext(QAContext)
+    const { todayIs, handleNewAnswer } = useContext(QAContext)
 
-    const handleNewAnswer = (e) => {
-        console.log(e)
-    }
 
     const [newAnswer, setNewAnswer] = useState({
         id: nanoid(),
@@ -28,7 +25,6 @@ const validationSchema = Yup.object().shape({
     answer: Yup.string()
         .required('This must be filled')
 })
-
 
     return (
 
