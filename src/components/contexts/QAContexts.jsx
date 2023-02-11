@@ -8,6 +8,7 @@ const QAProvider = ({children}) => {
     const [aList, setAList] = useState(null)
     const [closedForm, setClosedForm] = useState(true)
     const [questionToEdit, setQuestionToEdit] = useState(null)
+    const [answerToEdit, setAnswerToEdit] = useState(null)
 
     const getQData = async() => {
 
@@ -294,6 +295,23 @@ const QAProvider = ({children}) => {
         setClosedForm(false)
     }
 
+    const handleOpenAForm = (data) => {
+
+        console.log(data)
+        let editedAnswer = {
+            id: data.id,
+            qID: data.qID,
+            uID: data.uID,
+            answer: data.question,
+            likes: data.likes,
+            dislikes: data.dislikes,
+            edited: true,
+            date: todayIs()
+        }
+        setAnswerToEdit(editedAnswer)
+        setClosedForm(false)
+    }
+
     const handleCloseForm = () => {
         setQuestionToEdit(null)
         setClosedForm(true)
@@ -323,7 +341,8 @@ const QAProvider = ({children}) => {
                 handleOpenForm,
                 closedForm,
                 questionToEdit,
-                handleCloseForm
+                handleCloseForm,
+                handleOpenAForm
             }}
         >
             {children}
