@@ -168,6 +168,15 @@ const QAProvider = ({children}) => {
         console.log(data)
     }
 
+    const todayIs = () => {
+
+        const today = new Date()
+
+        return (
+            today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate()
+            )
+    }
+
     const handleQDelete = (id) => {
         
         const deleteAnswer = [...aList]
@@ -221,7 +230,8 @@ const QAProvider = ({children}) => {
                 handleADelete,
                 handleAEdit,
                 handleQEdit,
-                handleQDelete
+                handleQDelete,
+                todayIs
             }}
         >
             {children}
