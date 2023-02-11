@@ -151,13 +151,62 @@ const QAProvider = ({children}) => {
       })
     }
 
+    const handleADelete = (id) => {
+        
+        let deleteAnswer = [...aList]
+        let indexNr = deleteAnswer.findIndex(answer => answer.id == id)
+        deleteAnswer.splice(indexNr, 1)
+        setAList(deleteAnswer)
+        
+        fetch(`http://localhost:3001/answers/${id}`, {
+        method: 'DELETE'
+      })
+      .then (res => res.json())
+    }
 
+    const handleQEdit = (data) => {
+        console.log(data)
+    }
+
+    const handleQDelete = (id) => {
+        
+        const deleteAnswer = [...aList]
+        const answersToDelete = deleteAnswer.filter(answer => answer.qID === id)
+        answersToDelete.forEach(selectedAnswer => {
+            const location = deleteAnswer.findIndex(answer => answer.id == selectedAnswer.id)
+            deleteAnswer.splice(location,1)
+            setAList(deleteAnswer)
+
+            fetch(`http://localhost:3001/answers/${selectedAnswer.id}`, {
+                method: 'DELETE'
+              })
+              .then (res => res.json())
+        })
+
+        const deleteQuestion = [...qList]
+        console.log(deleteQuestion)
+        const indexNr = deleteQuestion.findIndex(question => question.id === id)
+        console.log(indexNr)
+        deleteQuestion.splice(indexNr, 1)
+        console.log(deleteQuestion)
+        setQList(deleteQuestion)
+        
+        fetch(`http://localhost:3001/questions/${id}`, {
+        method: 'DELETE'
+      })
+      .then (res => res.json())
+
+
+    }
+
+    const handleAEdit = (data) => {
+        console.log(data)
+    }
 
     useEffect(() => {
         getQData()
         getAData()
       }, [])
-
 
     return (
 
@@ -168,7 +217,11 @@ const QAProvider = ({children}) => {
                 handleLike,
                 handleDislike,
                 handleALike,
-                handleADislike
+                handleADislike,
+                handleADelete,
+                handleAEdit,
+                handleQEdit,
+                handleQDelete
             }}
         >
             {children}

@@ -227,6 +227,13 @@ main #questions {
                     margin: 0px;
                     font-size: 18px;
                     font-weight: 700;
+                    .icons {
+
+                        i {
+                            margin-left: 10px;
+                            font-size: 14px;
+                        }
+                    }
                 }
 
                 .qInfo {
@@ -306,6 +313,13 @@ main #questions {
                 
                 p {
                     margin: 0px;
+                }
+
+                .icons {
+
+                    i {
+                        margin-left: 10px;
+                    }
                 }
 
                 .qInfo {

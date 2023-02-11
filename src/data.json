@@ -31,33 +31,33 @@
   ],
   "questions": [
     {
-      "id": "1s3dgasdas56w4cw",
-      "uID": "f465sad6we51v",
-      "question": "How much does Earth weigh?",
-      "description": "I am just curious about how much does earth weigh? Some say it`s 100 billion kilograms, but I feel like it should be more.",
-      "likes": 24,
-      "dislikes": 33,
-      "edited": false,
-      "date": "2023.01.25"
-    },
-    {
       "id": "1snertdfgfdy6w4cw",
       "uID": "f465sgfwee51v",
       "question": "Why horses sleep standing?",
       "description": "I was told, that horses sleep standing. Is that true? If so, why?",
-      "likes": 12,
-      "dislikes": 5,
+      "likes": 14,
+      "dislikes": 6,
       "edited": true,
       "date": "2023.01.25"
     },
     {
-      "id": "1s3dgyuuy56w4cw",
+      "id": "1snsdfwgfdy6w4cw",
       "uID": "f465sgfwee51v",
-      "question": "Would you see a light frying faster than the speed of light?",
-      "description": "If you are traveling in a spaceship faster than the speed of light and turn on the lights in your ship - would you see them?",
-      "likes": 17,
-      "dislikes": 21,
-      "edited": false,
+      "question": "Why is it so?",
+      "description": "Short explanation of the question.",
+      "likes": 14,
+      "dislikes": 6,
+      "edited": true,
+      "date": "2023.01.25"
+    },
+    {
+      "id": "1snstjuyd6w4cw",
+      "uID": "u7-cU09ODJLZzIHCcF4ui",
+      "question": "How much money does Bill Gates have?",
+      "description": "I was always wondering if I will have so much as well.",
+      "likes": 16,
+      "dislikes": 6,
+      "edited": true,
       "date": "2023.01.25"
     }
   ],
@@ -73,20 +73,20 @@
       "date": "2023.01.25"
     },
     {
-      "id": "1snertsdftb4cw",
+      "id": "1ssaewery6w4cw",
       "qID": "1snertdfgfdy6w4cw",
-      "uID": "f465sgfwee51v",
-      "answer": "Le dot",
-      "likes": 9,
-      "dislikes": 5,
-      "edited": true,
+      "uID": "eCdajlLUwnxjpUIDwlefz",
+      "answer": "I have heard it`s because the ground is cold",
+      "likes": 23,
+      "dislikes": 31,
+      "edited": false,
       "date": "2023.01.25"
     },
     {
       "id": "1snsdffbrtb4cw",
-      "qID": "1s3dgasdas56w4cw",
+      "qID": "1snsdfwgfdy6w4cw",
       "uID": "u7-cU09ODJLZzIHCcF4ui",
-      "answer": "According to Google, the Earth weigh 5,972×10^24 kg",
+      "answer": "According to Google, it`s just is how it is",
       "likes": 15,
       "dislikes": 10,
       "edited": true,

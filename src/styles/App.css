@@ -197,6 +197,10 @@ main #questions #qBody .qAnda .questionCard .qField h2 {
   font-size: 18px;
   font-weight: 700;
 }
+main #questions #qBody .qAnda .questionCard .qField h2 .icons i {
+  margin-left: 10px;
+  font-size: 14px;
+}
 main #questions #qBody .qAnda .questionCard .qField .qInfo {
   display: flex;
   gap: 10px;
@@ -261,6 +265,9 @@ main #questions #qBody .qAnda .answerCard .aField {
 }
 main #questions #qBody .qAnda .answerCard .aField p {
   margin: 0px;
+}
+main #questions #qBody .qAnda .answerCard .aField .icons i {
+  margin-left: 10px;
 }
 main #questions #qBody .qAnda .answerCard .aField .qInfo {
   display: flex;

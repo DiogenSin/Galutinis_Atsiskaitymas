@@ -5,7 +5,7 @@ import { useContext } from "react"
 const Answer = ({data}) => {
 
     const { userList } = useContext(UserContext)
-    const { handleALike, handleADislike } = useContext(QAContext)
+    const { handleALike, handleADislike, handleADelete, handleAEdit } = useContext(QAContext)
     const answerAuthor = userList.find(user => user.id === data.uID)
 
     return (
@@ -17,7 +17,12 @@ const Answer = ({data}) => {
                         <img src={answerAuthor.picture} alt={answerAuthor.name} />
                     </div>
                     <div className="aField">
-                        <p>{data.answer}</p>
+                        <p>{data.answer}
+                            <span className="icons">
+                            <i className="glyphicon glyphicon-edit" onClick={e => handleAEdit(data)}></i>
+                            <i className="glyphicon glyphicon-trash" onClick={e => handleADelete(data.id)}></i>
+                            </span>
+                        </p>
                         <div className="qInfo">
                             <p className="date">{data.date}</p>
                             <p className="edited">Edited</p>
