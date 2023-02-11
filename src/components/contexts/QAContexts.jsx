@@ -212,6 +212,40 @@ const QAProvider = ({children}) => {
         console.log(data)
     }
 
+    const handleNewAnswer = (data) => {
+
+        const newAnser = {
+            id: data.id,
+            qID: data.qID,
+            uID: data.uID,
+            answer: data.answer,
+            likes: data.likes,
+            dislikes: data.dislikes,
+            edited: data.edited,
+            date: data.date
+        }
+
+        setAList([...aList, newAnser])
+
+        fetch('http://localhost:3001/answers', {
+            method: 'POST',
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                qID: data.qID,
+                uID: data.uID,
+                answer: data.answer,
+                likes: data.likes,
+                dislikes: data.dislikes,
+                edited: data.edited,
+                date: data.date
+            })
+        })
+
+    }
+
     useEffect(() => {
         getQData()
         getAData()
@@ -231,7 +265,8 @@ const QAProvider = ({children}) => {
                 handleAEdit,
                 handleQEdit,
                 handleQDelete,
-                todayIs
+                todayIs,
+                handleNewAnswer
             }}
         >
             {children}
