@@ -6,6 +6,7 @@ const QAProvider = ({children}) => {
 
     const [qList, setQList] = useState(null)
     const [aList, setAList] = useState(null)
+    const [closedForm, setClosedForm] = useState(true)
 
     const getQData = async() => {
 
@@ -166,6 +167,7 @@ const QAProvider = ({children}) => {
 
     const handleQEdit = (data) => {
         console.log(data)
+        setClosedForm(!closedForm)
     }
 
     const todayIs = () => {
@@ -246,6 +248,10 @@ const QAProvider = ({children}) => {
 
     }
 
+    const handleCloseForm = () => {
+        setClosedForm(!closedForm)
+    }
+
     useEffect(() => {
         getQData()
         getAData()
@@ -266,7 +272,9 @@ const QAProvider = ({children}) => {
                 handleQEdit,
                 handleQDelete,
                 todayIs,
-                handleNewAnswer
+                handleNewAnswer,
+                handleCloseForm,
+                closedForm
             }}
         >
             {children}

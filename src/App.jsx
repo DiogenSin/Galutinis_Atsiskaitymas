@@ -4,6 +4,8 @@ import Main from './components/pages/Main';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
 import Header from './components/organisms/Header';
+import Footer from './components/organisms/Footer';
+import EditQuestionForm from './components/organisms/EditForm';
 
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
           <Route path='/registration' element={<Registration/>} />
         </Routes>
       </main>
+      <Footer />
+      <EditQuestionForm />
     </>
   );
 }
