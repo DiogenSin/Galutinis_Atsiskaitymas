@@ -15,7 +15,9 @@ const Registration = () => {
         email:"",
         password:"",
         passwordRepeat: "",
-        picture: ""
+        picture: "",
+        likedQ: "",
+        likedA: ""
     })
 
 const validationSchema = Yup.object().shape({

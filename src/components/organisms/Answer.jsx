@@ -1,12 +1,18 @@
 import UserContext from "../contexts/UserContexts"
 import QAContext from "../contexts/QAContexts"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 
 const Answer = ({data}) => {
 
     const { userList, loggedIn, loggedInUser } = useContext(UserContext)
     const { handleALike, handleADislike, handleADelete, handleOpenAForm } = useContext(QAContext)
     const answerAuthor = userList.find(user => user.id === data.uID)
+
+    const [liked, setLiked] = useState(false)
+
+    const aLiked = () => {
+        setLiked(!liked)
+    }
 
     return (
 
@@ -29,7 +35,9 @@ const Answer = ({data}) => {
                                 <i className="glyphicon glyphicon-trash" onClick={e => handleADelete(data)}></i>
                             </span>
                             :
-                            null
+                            <span className="icons">
+                                <i className={liked ? "fa fa-heart" : "fa fa-heart-o"} onClick={aLiked}></i>
+                            </span>
                         }
 
                     </p>

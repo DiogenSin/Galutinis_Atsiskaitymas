@@ -30,7 +30,9 @@ const UserProvider = ({children}) => {
             let loggedIn = {
                 id:loginVerification.id,
                 name:loginVerification.name,
-                picture:loginVerification.picture
+                picture:loginVerification.picture,
+                likedQ:loginVerification.likedQ,
+                likedA:loginVerification.likedA
             }
             setLoggedInUser(loggedIn)
             navigate('/')
@@ -52,7 +54,9 @@ const UserProvider = ({children}) => {
                 name:regData.name,
                 email:regData.email,
                 password:regData.password,
-                picture:regData.picture
+                picture:regData.picture,
+                likedQ:regData.likedQ,
+                likedA:regData.likedA
             }
 
             setLoggedIn(true)
@@ -70,11 +74,15 @@ const UserProvider = ({children}) => {
                     name:regData.name,
                     email: regData.email,
                     password: regData.password,
-                    picture:regData.picture
+                    picture:regData.picture,
+                    likedQ:regData.likedQ,
+                    likedA:regData.likedA
                 })
             })
         }
     }
+
+
 
 
     useEffect(() => {

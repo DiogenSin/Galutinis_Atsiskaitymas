@@ -4,6 +4,7 @@ import UserContext from "../contexts/UserContexts"
 import { useContext } from "react"
 import Answers from "./Answers"
 import NewAnswer from "./NewAnswer"
+import { nanoid } from "nanoid"
 
 const AnsweredQuestions = () => {
 
@@ -43,7 +44,7 @@ const AnsweredQuestions = () => {
 
                         )
                 :
-                <h1>Loading</h1>
+                userList ? <h3>No answered questions!</h3> : <h1>Loading</h1> 
 
             }
         </>

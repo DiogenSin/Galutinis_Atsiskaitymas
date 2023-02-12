@@ -32,7 +32,7 @@ const AllQuestions = () => {
                         </div>
                         )
                 :
-                <h1>Loading</h1>
+                userList ? <h3>No questions!</h3> : <h1>Loading</h1> 
 
             }
         </>

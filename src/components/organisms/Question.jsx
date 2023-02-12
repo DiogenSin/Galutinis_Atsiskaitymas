@@ -6,8 +6,13 @@ const Question = ({data}) => {
 
     const { userList, loggedInUser, loggedIn } = useContext(UserContext) 
     const { handleLike, handleDislike, handleOpenForm, handleQDelete } = useContext(QAContext)
-    
     const questionAuthor = userList.find(user => user.id === data.uID)
+
+    const [liked, setLiked] = useState(false)
+
+    const qLiked = (id) => {
+        setLiked(!liked)
+    }
 
     return (
         <>
@@ -26,7 +31,9 @@ const Question = ({data}) => {
                                     <i className="glyphicon glyphicon-trash" onClick={e => handleQDelete(data.id)}></i>
                                 </span>
                             :
-                            null
+                            <span className="icons">
+                                <i className={liked ? "fa fa-heart" : "fa fa-heart-o"} onClick={qLiked}></i>
+                            </span>
                         }
                     </h2>
                     <p>{data.description}</p>

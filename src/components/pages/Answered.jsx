@@ -16,6 +16,7 @@ const Answered = () => {
             <div id="sorting">
                     <p>Sort by:</p>
                     <select name="sort" id="sort" onChange={handleSorting}>
+                        <option value="all">All</option>
                         <option value="date">Date</option>
                         <option value="answers">Answers</option>
                     </select>

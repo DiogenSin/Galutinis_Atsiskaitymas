@@ -9,7 +9,7 @@ import { Formik, Form, Field } from 'formik'
 const NewAnswer = ({data}) => {
 
     const { todayIs, handleNewAnswer } = useContext(QAContext)
-    const { loggedInUser } = useContext(UserContext)
+    const { loggedIn, loggedInUser } = useContext(UserContext)
 
     const [newAnswer, setNewAnswer] = useState({
         id: nanoid(),
@@ -33,7 +33,7 @@ const validationSchema = Yup.object().shape({
 
         {
 
-            loggedInUser ?
+            loggedIn ?
 
             <Formik
             initialValues={newAnswer}
