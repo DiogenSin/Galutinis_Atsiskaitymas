@@ -1,16 +1,24 @@
-import AllQuestions from "../organisms/AllQuestions"
-import AnsweredQuestions from "../organisms/AnsweredQuestions"
 import UnansweredQuestions from "../organisms/UnAnsweredQuestions"
-import { Routes, Route, NavLink} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
+import QAContext from "../contexts/QAContexts"
+import { useContext } from "react"
 
 const Unanswered = () => {
 
-    return (
+    const { handleSorting } = useContext(QAContext)
 
+    return (
 
         <>
         <section id="questions">
             <div id="qHeader">
+            <div id="sorting">
+                    <p>Sort by:</p>
+                    <select name="sort" id="sort" onChange={handleSorting}>
+                        <option value="date">Date</option>
+                        <option value="answers">Answers</option>
+                    </select>
+                </div>
                 <div id="filter">
                     <NavLink to='/questions/all'>All</NavLink>
                     <NavLink to='/questions/answered'>Answered</NavLink>

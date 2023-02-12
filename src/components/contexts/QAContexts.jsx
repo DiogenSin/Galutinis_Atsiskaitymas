@@ -39,6 +39,7 @@ const QAProvider = ({children}) => {
             likes: data.likes+1,
             dislikes: data.dislikes,
             edited: data.edited,
+            answers: data.answers,
             date: data.date
         }
 
@@ -57,6 +58,7 @@ const QAProvider = ({children}) => {
                 likes: data.likes+1,
                 dislikes: data.dislikes,
                 edited: data.edited,
+                answers: data.answers,
                 date: data.date
             })
       })
@@ -72,6 +74,7 @@ const QAProvider = ({children}) => {
             likes: data.likes,
             dislikes: data.dislikes+1,
             edited: data.edited,
+            answers: data.answers,
             date: data.date
         }
 
@@ -90,6 +93,7 @@ const QAProvider = ({children}) => {
                 likes: data.likes,
                 dislikes: data.dislikes+1,
                 edited: data.edited,
+                answers: data.answers,
                 date: data.date
             })
       })
@@ -159,17 +163,80 @@ const QAProvider = ({children}) => {
       })
     }
 
-    const handleADelete = (id) => {
-        
+    const reducesANumber = (data) => {
+
+
+        const qToChange = qList.find(question => question.id === data.qID)
+        const qChanged = {
+            id: qToChange.id,
+            uID: qToChange.uID,
+            question: qToChange.question,
+            description: qToChange.description,
+            likes: qToChange.likes,
+            dislikes: qToChange.dislikes,
+            edited: qToChange.edited,
+            answers: qToChange.answers-1,
+            date: qToChange.date
+        }
+        setQList(qList.map(question => question.id === data.qID ? {...question, ...qChanged} : question))
+  
+  
+        fetch(`http://localhost:3001/questions/${data.qID}`, {
+          method: "PUT",
+          headers: {
+              'Content-type' : 'application/json'
+          },
+          body: JSON.stringify({
+              id: qToChange.id,
+              uID: qToChange.uID,
+              question: qToChange.question,
+              description: qToChange.description,
+              likes: qToChange.likes,
+              dislikes: qToChange.dislikes,
+              edited: qToChange.edited,
+              answers: qToChange.answers-1,
+              date: qToChange.date
+          })
+    })
+
+
+    }
+    const increasesANumber = (data) => {
+
+        fetch(`http://localhost:3001/questions/${data.id}`, {
+            method: "PUT",
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                uID: data.uID,
+                question: data.question,
+                description: data.description,
+                likes: data.likes,
+                dislikes: data.dislikes,
+                edited: data.edited,
+                answers: data.answers,
+                date: data.date
+            })
+      })
+    }
+
+    const handleADelete = (data) => {
+
         let deleteAnswer = [...aList]
-        let indexNr = deleteAnswer.findIndex(answer => answer.id == id)
+        let indexNr = deleteAnswer.findIndex(answer => answer.id == data.id)
         deleteAnswer.splice(indexNr, 1)
         setAList(deleteAnswer)
         
-        fetch(`http://localhost:3001/answers/${id}`, {
-        method: 'DELETE'
-      })
-      .then (res => res.json())
+        fetch(`http://localhost:3001/answers/${data.id}`, {
+            method: 'DELETE'
+        })
+        .then (res => res.json())
+
+
+        reducesANumber(data)
+
     }
 
     const handleQEdit = (data) => {
@@ -182,6 +249,7 @@ const QAProvider = ({children}) => {
             likes: data.likes,
             dislikes: data.dislikes,
             edited: true,
+            answers: data.answers,
             date: todayIs()
         }
         setQList(qList.map(question => question.id === data.id ? {...question, ...editedQuestion} : question))
@@ -201,6 +269,7 @@ const QAProvider = ({children}) => {
                 likes: data.likes,
                 dislikes: data.dislikes,
                 edited: true,
+                answers: data.answers,
                 date: todayIs()
             })
       })
@@ -293,6 +362,22 @@ const QAProvider = ({children}) => {
 
         setAList([...aList, newAnswer])
 
+        const qToChange = qList.find(question => question.id === data.qID)
+        const qChanged = {
+            id: qToChange.id,
+            uID: qToChange.uID,
+            question: qToChange.question,
+            description: qToChange.description,
+            likes: qToChange.likes,
+            dislikes: qToChange.dislikes,
+            edited: qToChange.edited,
+            answers: qToChange.answers+1,
+            date: qToChange.date
+        }
+
+        setQList(qList.map(question => question.id === data.qID ? {...question, ...qChanged} : question))
+
+
         fetch('http://localhost:3001/answers', {
             method: 'POST',
             headers: {
@@ -310,6 +395,7 @@ const QAProvider = ({children}) => {
             })
         })
 
+        increasesANumber(qChanged)
     }
 
     const handleOpenNewQuestion = () => {
@@ -317,7 +403,7 @@ const QAProvider = ({children}) => {
     }
 
     const handleNewQuestion = (data) => {
-        console.log(data)
+
         const newQuestion = {
             id: data.id,
             uID: loggedInUser.id,
@@ -326,9 +412,10 @@ const QAProvider = ({children}) => {
             likes: 0,
             dislikes: 0,
             edited: false,
+            answers: 0,
             date: todayIs()
         }
-        console.log(newQuestion.id)
+
         setQList([...qList, newQuestion])
         setclosedNQForm(true)
 
@@ -345,6 +432,7 @@ const QAProvider = ({children}) => {
                 likes: 0,
                 dislikes: 0,
                 edited: false,
+                answers: 0,
                 date: todayIs()
             })
         })
@@ -360,6 +448,7 @@ const QAProvider = ({children}) => {
             likes: data.likes,
             dislikes: data.dislikes,
             edited: data.edited,
+            answers: data.answers,
             date: data.date
         }
         setQuestionToEdit(editedQuestion)
@@ -388,6 +477,30 @@ const QAProvider = ({children}) => {
         setClosedForm(true)
         setClosedAForm(true)
         setclosedNQForm(true)
+    }
+
+    const handleSorting = (e) => {
+
+        const sortBy = e.target.value;
+
+        let unsortedList = [...qList];
+        let sortedList = [...qList];
+    
+        switch (sortBy) {
+          case "date":
+            sortedList.sort((a, b) => new Date(b.date) - new Date(a.date));
+            break;
+          case "answers":
+            sortedList.sort((a, b) => b.answers - a.answers);
+            break;
+          case "All":
+            sortedList = unsortedList;
+            break;
+          default:
+            break;
+        }
+    
+        setQList(sortedList);
     }
 
     useEffect(() => {
@@ -420,7 +533,9 @@ const QAProvider = ({children}) => {
                 closedAForm,
                 handleOpenNewQuestion,
                 handleNewQuestion,
-                closedNQForm
+                closedNQForm,
+                setQList,
+                handleSorting
             }}
         >
             {children}

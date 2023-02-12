@@ -12,7 +12,6 @@ const AllQuestions = () => {
 
     return (
 
-
         <>
             {
                 qList && userList ?

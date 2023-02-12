@@ -228,6 +228,22 @@ main #questions {
         justify-content: center;
         height: 50px;
 
+        #sorting {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-right: 50px;
+
+            p {
+                margin: 0px;
+            }
+
+            select {
+                background-color: transparent;
+                border: 1px solid black;
+            }
+        }
+
         #filter {
             display: flex;
             justify-content: center;
