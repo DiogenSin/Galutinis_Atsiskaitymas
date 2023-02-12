@@ -8,57 +8,30 @@
       "picture": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
     },
     {
-      "id": "f465sgfwee51v",
-      "name": "Jonas",
-      "email": "jonas@gmail.com",
-      "password": "123456789",
-      "picture": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-    },
-    {
-      "id": "eCdajlLUwnxjpUIDwlefz",
-      "name": "Juozas",
-      "email": "dovydas@gmail.com",
-      "password": "123456789",
-      "picture": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-    },
-    {
-      "id": "u7-cU09ODJLZzIHCcF4ui",
-      "email": "jakasdovydas@gmail.com",
+      "id": "9PC7znZjhta0QIbii7sCq",
       "name": "Dovydas",
+      "email": "dovydas@gmail.com",
       "password": "123456",
-      "picture": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+      "picture": "https://tabib.ae/uploads/profile/free-profile-photo-whatsapp-4_1617693292_1625640135.png"
+    },
+    {
+      "id": "S_xt5TWJexGooAeWUJCg8",
+      "name": "Juozas",
+      "email": "juozas@gmail.com",
+      "password": "123456",
+      "picture": "https://cdn-images.resumelab.com/authors/tom_gerencer_resumelab.jpg"
     }
   ],
   "questions": [
     {
       "id": "1snertdfgfdy6w4cw",
-      "uID": "f465sgfwee51v",
-      "question": "Do snails breathe through their skin?",
-      "description": "It would be weird. Would`t it?",
-      "likes": 19,
-      "dislikes": 7,
-      "edited": true,
-      "date": "2023-2-11"
-    },
-    {
-      "id": "1snsdfwgfdy6w4cw",
-      "uID": "f465sgfwee51v",
-      "question": "Why is it so?",
-      "description": "Short explanation of the question.",
-      "likes": 14,
-      "dislikes": 6,
-      "edited": true,
-      "date": "2023.01.25"
-    },
-    {
-      "id": "1snstjuyd6w4cw",
-      "uID": "u7-cU09ODJLZzIHCcF4ui",
+      "uID": "S_xt5TWJexGooAeWUJCg8",
       "question": "How much money does Bill Gates have?",
-      "description": "I was always wondering if I will have so much as well.",
-      "likes": 16,
-      "dislikes": 6,
+      "description": "It would be weird. Would`t it?",
+      "likes": 23,
+      "dislikes": 10,
       "edited": false,
-      "date": "2023.01.25"
+      "date": "2023-2-11"
     }
   ],
   "answers": [
@@ -66,40 +39,40 @@
       "id": "1ssaerger6w4cw",
       "qID": "1snertdfgfdy6w4cw",
       "uID": "f465sad6we51v",
-      "answer": "I am not sure why they sleep standing, and at this point I am afraid to ask!",
+      "answer": "I found the answer! He has $15 bn.",
       "likes": 23,
       "dislikes": 31,
       "edited": true,
-      "date": "2023-2-11"
+      "date": "2023-2-12"
     },
     {
-      "id": "1ssaewery6w4cw",
+      "id": "L6w2kNWV4asd0E20VUd0D",
       "qID": "1snertdfgfdy6w4cw",
-      "uID": "eCdajlLUwnxjpUIDwlefz",
-      "answer": "I think it`s true.",
-      "likes": 24,
-      "dislikes": 31,
-      "edited": true,
-      "date": "2023-2-11"
-    },
-    {
-      "id": "1snsdffbrtb4cw",
-      "qID": "1snsdfwgfdy6w4cw",
-      "uID": "u7-cU09ODJLZzIHCcF4ui",
-      "answer": "According to Google, it`s just is how it is",
-      "likes": 15,
-      "dislikes": 10,
-      "edited": true,
-      "date": "2023.01.25"
-    },
-    {
-      "id": "BZwpg3zl6cGQl_ga8AtKO",
-      "qID": "1snstjuyd6w4cw",
-      "uID": "u7-cU09ODJLZzIHCcF4ui",
-      "answer": "He has too much money. Greed is what moves the economy!",
+      "uID": "S_xt5TWJexGooAeWUJCg8",
+      "answer": "Not so much actually.",
       "likes": 1,
       "dislikes": 0,
       "edited": true,
+      "date": "2023-2-11"
+    },
+    {
+      "id": "7G-JmKhkreWd8-839OWur",
+      "qID": "1snertdfgfdy6w4cw",
+      "uID": "9PC7znZjhta0QIbii7sCq",
+      "answer": "I think you lie. He has a lot.",
+      "likes": 1,
+      "dislikes": 1,
+      "edited": false,
+      "date": "2023-2-11"
+    },
+    {
+      "id": "t_6hfUXtNo8-Sfl0TTZdK",
+      "qID": "1snertdfgfdy6w4cw",
+      "uID": "S_xt5TWJexGooAeWUJCg8",
+      "answer": "Nah. Just kidding.",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
       "date": "2023-2-11"
     }
   ]

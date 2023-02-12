@@ -15,6 +15,44 @@ header {
     border-bottom: 1px solid gray;
     height: 13vh;
 
+    #userField {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        i {
+            font-size: 35px;
+            color: rgb(122, 52, 212);
+        }
+
+        i:hover {
+            font-size: 35px;
+            cursor: pointer;
+            color: rgb(152, 85, 240);
+        }
+
+        #userInfo {
+            display: flex;
+            flex-direction: column;
+            
+            #userName {
+                font-weight: 700;
+            }
+            #logOut {
+                color: red;
+            }
+            #logOut:hover {
+                cursor: pointer;
+                color: rgb(112, 7, 7);
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+        
+    }
+
     img {
         height: 50px;
     }
