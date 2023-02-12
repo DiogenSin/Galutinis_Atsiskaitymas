@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { createContext, useState, useEffect, useContext } from "react";
 import UserContext from "./UserContexts";
 
@@ -9,6 +10,7 @@ const QAProvider = ({children}) => {
     const [aList, setAList] = useState(null)
     const [closedForm, setClosedForm] = useState(true)
     const [closedAForm, setClosedAForm] = useState(true)
+    const [closedNQForm, setclosedNQForm] = useState(true)
     const [questionToEdit, setQuestionToEdit] = useState(null)
     const [answerToEdit, setAnswerToEdit] = useState(null)
     const { loggedInUser } = useContext(UserContext)
@@ -229,11 +231,8 @@ const QAProvider = ({children}) => {
         })
 
         const deleteQuestion = [...qList]
-        console.log(deleteQuestion)
         const indexNr = deleteQuestion.findIndex(question => question.id === id)
-        console.log(indexNr)
         deleteQuestion.splice(indexNr, 1)
-        console.log(deleteQuestion)
         setQList(deleteQuestion)
         
         fetch(`http://localhost:3001/questions/${id}`, {
@@ -281,7 +280,7 @@ const QAProvider = ({children}) => {
 
     const handleNewAnswer = (data) => {
 
-        const newAnser = {
+        const newAnswer = {
             id: data.id,
             qID: data.qID,
             uID: loggedInUser.id,
@@ -292,7 +291,7 @@ const QAProvider = ({children}) => {
             date: data.date
         }
 
-        setAList([...aList, newAnser])
+        setAList([...aList, newAnswer])
 
         fetch('http://localhost:3001/answers', {
             method: 'POST',
@@ -311,6 +310,44 @@ const QAProvider = ({children}) => {
             })
         })
 
+    }
+
+    const handleOpenNewQuestion = () => {
+        setclosedNQForm(false)
+    }
+
+    const handleNewQuestion = (data) => {
+        console.log(data)
+        const newQuestion = {
+            id: data.id,
+            uID: loggedInUser.id,
+            question: data.question,
+            description: data.description,
+            likes: 0,
+            dislikes: 0,
+            edited: false,
+            date: todayIs()
+        }
+        console.log(newQuestion.id)
+        setQList([...qList, newQuestion])
+        setclosedNQForm(true)
+
+        fetch('http://localhost:3001/questions', {
+            method: 'POST',
+            headers: {
+                'Content-type' : 'application/json'
+            },
+            body: JSON.stringify({
+                id: data.id,
+                uID: loggedInUser.id,
+                question: data.question,
+                description: data.description,
+                likes: 0,
+                dislikes: 0,
+                edited: false,
+                date: todayIs()
+            })
+        })
     }
 
     const handleOpenForm = (data) => {
@@ -350,6 +387,7 @@ const QAProvider = ({children}) => {
         setAnswerToEdit(null)
         setClosedForm(true)
         setClosedAForm(true)
+        setclosedNQForm(true)
     }
 
     useEffect(() => {
@@ -379,7 +417,10 @@ const QAProvider = ({children}) => {
                 handleCloseForm,
                 handleOpenAForm,
                 answerToEdit,
-                closedAForm
+                closedAForm,
+                handleOpenNewQuestion,
+                handleNewQuestion,
+                closedNQForm
             }}
         >
             {children}

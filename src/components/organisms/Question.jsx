@@ -13,7 +13,7 @@ const Question = ({data}) => {
         <>
         {
             loggedIn ?
-                <div className="questionCard">
+                <div className="questionCard" id={data.id}>
                 <div className="userImg">
                     <img src={questionAuthor.picture} alt={questionAuthor.name} />
                 </div>
@@ -44,7 +44,7 @@ const Question = ({data}) => {
                 </div>
                 </div>
             :
-                <div className="questionCard">
+                <div className="questionCard" id={data.id}>
                 <div className="userImg">
                     <img src={questionAuthor.picture} alt={questionAuthor.name} />
                 </div>

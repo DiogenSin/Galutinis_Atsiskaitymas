@@ -39,6 +39,16 @@
       "dislikes": 10,
       "edited": false,
       "date": "2023-2-11"
+    },
+    {
+      "id": "VACq0c_T_netqAHyWKZFb",
+      "uID": "9PC7znZjhta0QIbii7sCq",
+      "question": "Where I can buy alcohol after 8pm?",
+      "description": "I really need it!",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
+      "date": "2023-2-12"
     }
   ],
   "answers": [
@@ -53,30 +63,10 @@
       "date": "2023-2-12"
     },
     {
-      "id": "1omPnSM-V7nxYQymgBXgn",
-      "qID": "1snertdfgfdy6w4cw",
+      "id": "8FZN9DR139LiHowXp1VsA",
+      "qID": "VACq0c_T_netqAHyWKZFb",
       "uID": "9PC7znZjhta0QIbii7sCq",
-      "answer": "False. My uncle said he only has $100.",
-      "likes": 0,
-      "dislikes": 0,
-      "edited": true,
-      "date": "2023-2-12"
-    },
-    {
-      "id": "GwciFanS-4EwTiYJaQnft",
-      "qID": "1snertdfgfdy6w4cw",
-      "uID": "S_xt5TWJexGooAeWUJCg8",
-      "answer": "You are both wrong. Google showed me $25 000. He got the money from his grandmother.",
-      "likes": 1,
-      "dislikes": 0,
-      "edited": false,
-      "date": "2023-2-12"
-    },
-    {
-      "id": "tCRiCIfgUyNSLd2NU_iG0",
-      "qID": "1snertdfgfdy6w4cw",
-      "uID": "hJyFkWofSpxSWR5d0i5-S",
-      "answer": "Mind your own business guys.",
+      "answer": "No need for answer anymore. Everybody left 😪",
       "likes": 0,
       "dislikes": 0,
       "edited": false,

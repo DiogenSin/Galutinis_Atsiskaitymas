@@ -9,6 +9,7 @@ import EditQuestionForm from './components/organisms/EditForm';
 import QAContext from './components/contexts/QAContexts';
 import { useContext } from 'react';
 import EditAnswerForm from './components/organisms/EditAnswerForm';
+import NewQuestionForm from './components/organisms/NewQuestionForm';
 
 function App() {
   
@@ -39,7 +40,7 @@ function App() {
         :
         null
       }
-
+      <NewQuestionForm />
     </>
   );
 }
