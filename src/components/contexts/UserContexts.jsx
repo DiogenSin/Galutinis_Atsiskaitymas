@@ -6,6 +6,7 @@ const UserContext = createContext()
 const UserProvider = ({children}) => {
 
     const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedInUser, setLoggedInUser] = useState(null)
     const [userList, setUserList] = useState(null)
     const [loginFailed, setLoginFailed] = useState(false)
     const [userExists, setUserExists] = useState(false)
@@ -23,11 +24,15 @@ const UserProvider = ({children}) => {
     const handleLogin = (loginData) => {
 
         const loginVerification = userList.find(user => user.email === loginData.email && user.password === loginData.password)
-        
-        loginVerification ? setLoggedIn(true) : setLoginFailed(true)
 
         if(loginVerification) {
             setLoggedIn(true)
+            let loggedIn = {
+                id:loginVerification.id,
+                name:loginVerification.name,
+                picture:loginVerification.picture
+            }
+            setLoggedInUser(loggedIn)
             navigate('/')
         } else {
             setLoginFailed(true)
@@ -42,13 +47,17 @@ const UserProvider = ({children}) => {
             setUserExists(true)
         } else {
 
-            setLoggedIn(true)
-            setUserList(...userList, {
+            let newUser = {
+                id:regData.id,
+                name:regData.name,
                 email:regData.email,
                 password:regData.password,
-                id:regData.id
-            })
-            
+                picture:regData.picture
+            }
+
+            setLoggedIn(true)
+            setLoggedInUser(newUser)
+            setUserList([...userList, newUser])
             navigate('/')
 
             fetch('http://localhost:3001/users', {
@@ -58,8 +67,10 @@ const UserProvider = ({children}) => {
                 },
                 body: JSON.stringify({
                     id: regData.id,
+                    name:regData.name,
                     email: regData.email,
-                    password: regData.password
+                    password: regData.password,
+                    picture:regData.picture
                 })
             })
         }
@@ -76,11 +87,13 @@ const UserProvider = ({children}) => {
         <UserContext.Provider
             value={{
                 handleLogin,
+                setLoggedIn,
                 loggedIn,
                 loginFailed,
                 handleRegistration,
                 userExists,
-                userList
+                userList,
+                loggedInUser
             }}
         >
             {children}

@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
+import UserContext from "./UserContexts";
 
 const QAContext = createContext()
 
@@ -10,6 +11,7 @@ const QAProvider = ({children}) => {
     const [closedAForm, setClosedAForm] = useState(true)
     const [questionToEdit, setQuestionToEdit] = useState(null)
     const [answerToEdit, setAnswerToEdit] = useState(null)
+    const { loggedInUser } = useContext(UserContext)
 
     const getQData = async() => {
 
@@ -282,7 +284,7 @@ const QAProvider = ({children}) => {
         const newAnser = {
             id: data.id,
             qID: data.qID,
-            uID: data.uID,
+            uID: loggedInUser.id,
             answer: data.answer,
             likes: data.likes,
             dislikes: data.dislikes,

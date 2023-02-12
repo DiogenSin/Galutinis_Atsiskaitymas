@@ -10,14 +10,17 @@ const Registration = () => {
     const { handleRegistration, userExists } = useContext(UserContext)
 
     const [registrationInputs, setregistrationInputs] = useState({
+        id:nanoid(),
+        name:"",
         email:"",
         password:"",
         passwordRepeat: "",
-        picture: "",
-        id:nanoid()
+        picture: ""
     })
 
 const validationSchema = Yup.object().shape({
+    name: Yup.string()
+        .required('This must be filled'),
     email: Yup.string()
         .email('Email must be valid')
         .required('This must be filled'),
@@ -44,6 +47,20 @@ const validationSchema = Yup.object().shape({
         
             <Form action='' id="registrationForm">
                 <h1>Registration</h1>
+                <label htmlFor='name'>
+                    Name:
+                    <Field
+                        type="text"
+                        name="name"
+                        placeholder=""
+                        value={values.name}
+                        onChange={(e) => setValues({...values, name: e.target.value})}
+                    />
+                    {
+                        errors.name && touched.name ?
+                        <span>{errors.name}</span> : null
+                    }
+                </label>
                 <label htmlFor='email'>
                     Email:
                     <Field

@@ -13,13 +13,15 @@ const Answers = ({qID}) => {
         <>
         {
             findAnwer.map(answer => 
-                
-                <Answer
-                key={answer.id}
-                data={answer}
-                />
-                )
+                    
+                        <Answer
+                        key={answer.id}
+                        data={answer}
+                        />
+                    
+                    )
         }
+
         </>
     )
 }
