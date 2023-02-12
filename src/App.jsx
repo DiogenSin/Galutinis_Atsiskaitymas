@@ -10,6 +10,9 @@ import QAContext from './components/contexts/QAContexts';
 import { useContext } from 'react';
 import EditAnswerForm from './components/organisms/EditAnswerForm';
 import NewQuestionForm from './components/organisms/NewQuestionForm';
+import AllQuestions from './components/organisms/AllQuestions';
+import Unanswered from './components/pages/Unanswered';
+import Answered from './components/pages/Answered';
 
 function App() {
   
@@ -23,8 +26,12 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Main/>} />
+          <Route path='/questions' element={<Main/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/registration' element={<Registration/>} />
+          <Route path='/questions/all' element={<Main/>} />
+          <Route path='/questions/answered' element={<Answered/>} />
+          <Route path='/questions/unanswered' element={<Unanswered/>} />
         </Routes>
       </main>
       <Footer />

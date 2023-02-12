@@ -221,8 +221,31 @@ main #questions {
     padding: 15px;
 
     #qHeader {
-        text-align: center;
         margin-bottom: 25px;
+        border-bottom: 1px solid black;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        height: 50px;
+
+        #filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+
+            a {
+                margin: 5px;
+                padding: 5px;
+                color: black;
+                width: 90px;
+                text-align: center;
+            }
+
+            .active {
+                background-color: rgba(121, 52, 212, 0.096);
+                font-weight: bold;
+            }
+        }
     }
 
 

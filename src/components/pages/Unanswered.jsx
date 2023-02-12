@@ -3,7 +3,7 @@ import AnsweredQuestions from "../organisms/AnsweredQuestions"
 import UnansweredQuestions from "../organisms/UnAnsweredQuestions"
 import { Routes, Route, NavLink} from 'react-router-dom'
 
-const Main = () => {
+const Unanswered = () => {
 
     return (
 
@@ -19,7 +19,8 @@ const Main = () => {
             </div>
             <div id="qBody">
                 
-                    <AllQuestions />
+
+                   <UnansweredQuestions/>
 
             </div>
         </section>
@@ -30,4 +31,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Unanswered
