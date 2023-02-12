@@ -302,7 +302,7 @@ const QAProvider = ({children}) => {
             body: JSON.stringify({
                 id: data.id,
                 qID: data.qID,
-                uID: data.uID,
+                uID: loggedInUser.id,
                 answer: data.answer,
                 likes: data.likes,
                 dislikes: data.dislikes,
