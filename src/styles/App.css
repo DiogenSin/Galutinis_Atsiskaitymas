@@ -199,6 +199,19 @@ main #questions #qHeader {
   justify-content: center;
   height: 50px;
 }
+main #questions #qHeader #sorting {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-right: 50px;
+}
+main #questions #qHeader #sorting p {
+  margin: 0px;
+}
+main #questions #qHeader #sorting select {
+  background-color: transparent;
+  border: 1px solid black;
+}
 main #questions #qHeader #filter {
   display: flex;
   justify-content: center;

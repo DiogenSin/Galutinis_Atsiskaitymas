@@ -26,7 +26,7 @@ const Answer = ({data}) => {
 
                             <span className="icons">
                                 <i className="glyphicon glyphicon-edit" onClick={e => handleOpenAForm(data)}></i>
-                                <i className="glyphicon glyphicon-trash" onClick={e => handleADelete(data.id)}></i>
+                                <i className="glyphicon glyphicon-trash" onClick={e => handleADelete(data)}></i>
                             </span>
                             :
                             null

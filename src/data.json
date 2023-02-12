@@ -35,19 +35,32 @@
       "uID": "S_xt5TWJexGooAeWUJCg8",
       "question": "How much money does Bill Gates have?",
       "description": "It would be weird. Would`t it?",
-      "likes": 23,
+      "likes": 24,
       "dislikes": 10,
       "edited": false,
+      "answers": 2,
       "date": "2023-2-11"
     },
     {
-      "id": "VACq0c_T_netqAHyWKZFb",
+      "id": "UO8RX8fihTawfG9ycQ4nS",
       "uID": "9PC7znZjhta0QIbii7sCq",
       "question": "Where I can buy alcohol after 8pm?",
-      "description": "I really need it!",
+      "description": "We ran out of supplies!",
       "likes": 0,
       "dislikes": 0,
       "edited": false,
+      "answers": 1,
+      "date": "2023-2-12"
+    },
+    {
+      "id": "z2xtORzmm7zQW5CEiTu6F",
+      "uID": "9PC7znZjhta0QIbii7sCq",
+      "question": "Why can't I touch our elbow with my tongue?",
+      "description": "It is impossible, help!",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
+      "answers": 0,
       "date": "2023-2-12"
     }
   ],
@@ -57,9 +70,29 @@
       "qID": "1snertdfgfdy6w4cw",
       "uID": "f465sad6we51v",
       "answer": "I found the answer! He has $15 bn.",
-      "likes": 23,
+      "likes": 24,
       "dislikes": 31,
       "edited": true,
+      "date": "2023-2-12"
+    },
+    {
+      "id": "GOQq5LiDmwf7iP1SppHFE",
+      "qID": "UO8RX8fihTawfG9ycQ4nS",
+      "uID": "9PC7znZjhta0QIbii7sCq",
+      "answer": "I know, but will not tell you! 😎",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
+      "date": "2023-2-12"
+    },
+    {
+      "id": "fA3R8FPH7KNMZ-s52LLVD",
+      "qID": "1snertdfgfdy6w4cw",
+      "uID": "9PC7znZjhta0QIbii7sCq",
+      "answer": "Too much for sure!",
+      "likes": 0,
+      "dislikes": 0,
+      "edited": false,
       "date": "2023-2-12"
     }
   ]
