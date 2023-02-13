@@ -9,7 +9,7 @@ const Answer = ({data}) => {
     const answerAuthor = userList.find(user => user.id === data.uID)
 
     const [liked, setLiked] = useState(false)
-
+    const function  ()
     const aLiked = () => {
         setLiked(!liked)
     }
