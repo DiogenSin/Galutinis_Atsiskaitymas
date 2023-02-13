@@ -62,12 +62,12 @@ const Question = ({data}) => {
                         <p className="date">{data.date}</p>
                     </div>
                 </div>
-                <div className="likeDislike">
+                {/* <div className="likeDislike">
                     <p className="like">{data.likes}</p>
                     <i className="glyphicon glyphicon-chevron-up" onClick={e => handleLike(data)}></i>
                     <p className="dislike">{data.dislikes}</p>
                     <i className="glyphicon glyphicon-chevron-down" onClick={e => handleDislike(data)}></i>
-                </div>
+                </div> */}
                 </div>
         }
         </>

@@ -67,12 +67,12 @@ const Answer = ({data}) => {
                     </div>
                 </div>
                 </div>
-                <div className="likeDislike">
+                {/* <div className="likeDislike">
                     <p className="like">{data.likes}</p>
                     <i className="glyphicon glyphicon-chevron-up" onClick={e => handleALike(data)}></i>
                     <p className="dislike">{data.dislikes}</p>
                     <i className="glyphicon glyphicon-chevron-down" onClick={e => handleADislike(data)}></i>
-                </div>
+                </div> */}
                 </div>  
         }
         </>

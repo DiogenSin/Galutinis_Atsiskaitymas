@@ -17,6 +17,15 @@
       "picture": "https://cdn-images.resumelab.com/authors/tom_gerencer_resumelab.jpg",
       "likedQ": "",
       "likedA": ""
+    },
+    {
+      "id": "R_Teh1hEHrB4-itTQVhlq",
+      "name": "Juozas",
+      "email": "juozas@gmail.com",
+      "password": "123456",
+      "picture": "http://www.rottmair.de/profiles/Sebastian_Rottmair.jpg",
+      "likedQ": "",
+      "likedA": ""
     }
   ],
   "questions": [
@@ -25,17 +34,17 @@
       "uID": "f465sad6we51v",
       "question": "Where I can buy alcohol after 8pm?",
       "description": "We ran out of supplies!",
-      "likes": 1,
-      "dislikes": 0,
+      "likes": 2,
+      "dislikes": 1,
       "edited": false,
-      "answers": 1,
+      "answers": 2,
       "date": "2023-2-11"
     },
     {
       "id": "dfvsNMAQlEgn0bnGbxW6D",
       "uID": "FLAFr1C3Is-FslnoKNIJ_",
-      "question": "Klausimas?",
-      "description": "wov2po3w",
+      "question": "Why horses sleep standing?",
+      "description": "It`s weird, isn`t it?",
       "likes": 1,
       "dislikes": 1,
       "edited": false,
@@ -50,6 +59,16 @@
       "uID": "FLAFr1C3Is-FslnoKNIJ_",
       "answer": "Stop drinking!",
       "likes": 2,
+      "dislikes": 0,
+      "edited": false,
+      "date": "2023-2-13"
+    },
+    {
+      "id": "GKqPvrNEzhkkrc91qRAe1",
+      "qID": "UO8RX8fihTawfG9ycQ4nS",
+      "uID": "R_Teh1hEHrB4-itTQVhlq",
+      "answer": "Yeah mate! Stop!",
+      "likes": 0,
       "dislikes": 0,
       "edited": false,
       "date": "2023-2-13"
